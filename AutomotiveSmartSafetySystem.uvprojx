@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\I2C;.\MCAL\DIO;.\HAL\LCD.\Drivers</IncludePath>
+              <IncludePath>.\MCAL\I2C;.\MCAL\DIO;.\HAL\LCD;.\Drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
