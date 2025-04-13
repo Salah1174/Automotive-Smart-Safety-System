@@ -1,25 +1,38 @@
+#include "DIO.h"
 #include "TM4C123.h"
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
 
-void delay(void) {
+void delay_ms(uint32_t ms) {
     volatile uint32_t i;
-    for (i = 0; i < 200000; i++) {
+    while (ms--) {
+        for (i = 0; i < 4000; i++) {} 
     }
 }
 
-int main()
-{
-    SYSCTL->RCGCGPIO |= 0x20; 
-    while ((SYSCTL->PRGPIO & 0x20) == 0)
-		{
+int main() {
+    DIO_Init('F', 1, DIO_PIN_OUTPUT);  
+    DIO_Init('F', 0, DIO_PIN_INPUT);   
+
+    bool buttonPressed = false;
+
+    while (true) {
+        uint8_t input = DIO_ReadPin('F', 0);
+
+        if (input == 1 && !buttonPressed) {
+            delay_ms(20); 
+            if (DIO_ReadPin('F', 0) == 1) {
+                uint8_t current = DIO_ReadPin('F', 1);
+                DIO_WritePin('F', 1, !current); 
+                buttonPressed = true;
+            }
+        }
+
+        if (input == 0) {
+            buttonPressed = false;
+        }
     }
-    GPIOF->DIR |= 0x02;
-    GPIOF->DEN |= 0x02;
-    while (true)
-    {
-        GPIOF->DATA ^= 0x02;  
-        delay();
-    }
+
     return 0;
 }

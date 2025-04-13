@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Drivers</IncludePath>
+              <IncludePath>.\MCAL\I2C;.\MCAL\DIO;.\HAL\LCD.\Drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,7 +393,22 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>MCAL</GroupName>
+          <GroupName>DIO</GroupName>
+          <Files>
+            <File>
+              <FileName>DIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\DIO\DIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>DIO.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\DIO\DIO.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>I2C</GroupName>
           <Files>
             <File>
               <FileName>I2C.c</FileName>
@@ -401,19 +416,24 @@
               <FilePath>.\MCAL\I2C\I2C.c</FilePath>
             </File>
             <File>
-              <FileName>DIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\DIO\DIO.c</FilePath>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\I2C\I2C.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>HAL</GroupName>
+          <GroupName>LCD</GroupName>
           <Files>
             <File>
               <FileName>LCD.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\HAL\LCD\LCD.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LCD\LCD.h</FilePath>
             </File>
           </Files>
         </Group>
