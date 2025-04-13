@@ -1,5 +1,9 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
+".\objects\i2c.o"
+".\objects\dio.o"
+".\objects\lcd.o"
+"C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rvmdk\driverlib.lib"
 ".\objects\clib_os.o"
 ".\objects\cmsis_os2.o"
 ".\objects\os_systick.o"

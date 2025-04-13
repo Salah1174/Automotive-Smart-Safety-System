@@ -1,7 +1,15 @@
 #include "TM4C123GH6PM.h"
 #include <stdint.h>
+#include <stdbool.h>
 #include "I2C.h"
-
+#include "driverlib/i2c.h"
+#include "driverlib/i2c.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/pin_map.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_i2c.h"
 
 
 void I2C_Init(void){}
