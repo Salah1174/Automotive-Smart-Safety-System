@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
-#include "../MCAL/Systick (for i2c)/systick.h"
+#include "../MCAL/Timer0/timer0.h"
 
 // commands
 #define LCD_CLEARDISPLAY 0x01
@@ -69,17 +69,32 @@ typedef struct {
 //functions 
 
 void LCDI2CInit(LCD_I2C *display, uint8_t address, uint8_t lcd_cols,uint8_t lcd_rows);
-void begin(LCD_I2C *display,systick_config_t* config);
-void configDisplay(LCD_I2C *display  ,systick_config_t* config);
-void clear(LCD_I2C *display ,systick_config_t* config);
-void home(LCD_I2C *display ,systick_config_t* config);
-
+void begin(LCD_I2C *display);
+void configDisplay(LCD_I2C *display  );
+void clear(LCD_I2C *display );
+void home(LCD_I2C *display );
+void noCursor(LCD_I2C *display  );
+void cursor(LCD_I2C *display  );
+void backlight(LCD_I2C *display);
+void noBacklight(LCD_I2C *display);
+void noBlink(LCD_I2C *display  );
+void blink(LCD_I2C *display  );
+void scrollDisplayRight(LCD_I2C *display  );
+void scrollDisplayLeft(LCD_I2C *display  );
+void noDisplay(LCD_I2C *display  );
+void display(LCD_I2C *display  );
+void leftToRight(LCD_I2C *display  );
+void rightToLeft(LCD_I2C *display  );
+void autoscroll(LCD_I2C *display  );
+void noAutoscroll(LCD_I2C *display  );
+size_t printChar(LCD_I2C *display, const char c  );
+size_t print(LCD_I2C *display, const char* str  );
 
 //*********** Low-level LCD functions **************
-void command(LCD_I2C *display, uint8_t value ,systick_config_t* config);
-void send(LCD_I2C *display, uint8_t value, uint8_t mode ,systick_config_t* config);
-void write4bits(LCD_I2C *display, uint8_t value, systick_config_t* config);
+void command(LCD_I2C *display, uint8_t value );
+void send(LCD_I2C *display, uint8_t value, uint8_t mode );
+void write4bits(LCD_I2C *display, uint8_t value);
 void expanderWrite(LCD_I2C *display, uint8_t _data);
-void pulseEnable(LCD_I2C *display, uint8_t _data ,systick_config_t* config);
+void pulseEnable(LCD_I2C *display, uint8_t _data );
 
 #endif

@@ -9,6 +9,7 @@
 
 void I2C_Init(void);
 void I2CSendByte(uint8_t slave_addr, uint8_t value);
+//static int I2C_wait_till_done(void);
 //uint8_t I2C_Write(uint32_t slave_address, uint8_t slave_memory_address, uint32_t bytes_count, uint8_t* data);
 // uint8_t I2C_Read();
 #endif

@@ -23,6 +23,8 @@ void I2C_Init(void){
     // Configure the pin muxing for I2C0 functions on port B2 and B3.
     GPIOPinConfigure(GPIO_PB2_I2C0SCL);
     GPIOPinConfigure(GPIO_PB3_I2C0SDA);
+	
+	
      
     // Select the I2C function for I2C0 functions on B2 and B3
     GPIOPinTypeI2CSCL(GPIO_PORTB_BASE, GPIO_PIN_2);
@@ -38,7 +40,11 @@ void I2C_Init(void){
     //clear I2C FIFOs
     HWREG(I2C0_BASE + I2C_O_FIFOCTL) = 80008000;
 }
-
+//static int I2C_wait_till_done(void)
+//{
+//    while(I2C3->MCS & 1);   /* wait until I2C master is not busy */
+//    return I2C3->MCS & 0xE; /* return I2C error code, 0 if no error*/
+//}
 void I2CSendByte(uint8_t slave_addr, uint8_t value){
 	I2CMasterSlaveAddrSet(I2C0_BASE, slave_addr, false); // set address of slave for master to communicate with
 	//put data to be sent into FIFO

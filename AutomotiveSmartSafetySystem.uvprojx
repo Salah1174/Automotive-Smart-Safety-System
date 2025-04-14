@@ -439,6 +439,18 @@
         </Group>
         <Group>
           <GroupName>APP</GroupName>
+          <Files>
+            <File>
+              <FileName>display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\APP\Display\display.c</FilePath>
+            </File>
+            <File>
+              <FileName>display.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\APP\Display\display.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers</GroupName>
@@ -451,17 +463,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Systick (for i2c)</GroupName>
+          <GroupName>Timer0</GroupName>
           <Files>
             <File>
-              <FileName>systick.c</FileName>
+              <FileName>timer0.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\MCAL\Systick (for i2c)\systick.c</FilePath>
+              <FilePath>.\MCAL\Timer0\timer0.c</FilePath>
             </File>
             <File>
-              <FileName>systick.h</FileName>
+              <FileName>timer0.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\MCAL\Systick (for i2c)\systick.h</FilePath>
+              <FilePath>.\MCAL\Timer0\timer0.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -27,6 +27,10 @@ Project File Date:  04/14/2025
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
+compiling display.c...
+compiling LCD.c...
+linking...
+Program Size: Code=14432 RO-data=1848 RW-data=8 ZI-data=11704  
 ".\Objects\AutomotiveSmartSafetySystem.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -95,19 +99,19 @@ Package Vendor: Keil
       Include file:  CMSIS/RTOS2/FreeRTOS/Config/FreeRTOSConfig.h
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:11.1.0
-      Source file:   Source/list.c
-      Include file:  Source/include/queue.h
-      Include file:  Source/include/task.h
-      Source file:   Source/portable/GCC/ARM_CM4F/port.c
       Source file:   Source/tasks.c
-      Include file:  Source/include/FreeRTOS.h
-      Include file:  Source/include/semphr.h
+      Source file:   Source/portable/GCC/ARM_CM4F/port.c
+      Source file:   Source/list.c
       Source file:   Source/queue.c
+      Include file:  Source/include/task.h
       Source file:   CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
+      Include file:  Source/include/semphr.h
+      Include file:  Source/include/FreeRTOS.h
+      Include file:  Source/include/queue.h
 
    * Component: ARM.FreeRTOS::RTOS:Event Groups:11.1.0
-      Source file:   Source/event_groups.c
       Include file:  Source/include/event_groups.h
+      Source file:   Source/event_groups.c
 
    * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:11.1.0
       Source file:   Source/portable/MemMang/heap_4.c
@@ -117,8 +121,8 @@ Package Vendor: Keil
       Source file:   Source/timers.c
 
    * Component: ARM::CMSIS Driver:I2C:Custom:1.0.0
-      Include file:  CMSIS/Driver/Include/Driver_I2C.h
       Source file:   CMSIS/Driver/DriverTemplates/Driver_I2C.c
+      Include file:  CMSIS/Driver/Include/Driver_I2C.h
 
    * Component: ARM::CMSIS:CORE:6.1.0
 
@@ -142,10 +146,10 @@ Package Vendor: Keil
       Source file:   Source/retarget_io.c
 
    * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device/Source/system_TM4C123.c
       Include file:  Device/Include/TM4C123/TM4C123.h
       Source file:   Device/Source/ARM/startup_TM4C123.s
-      Source file:   Device/Source/system_TM4C123.c
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

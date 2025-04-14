@@ -1,8 +1,15 @@
 Dependencies for Project 'AutomotiveSmartSafetySystem', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
-F (.\main.c)(0x67FC3BEC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
+F (.\main.c)(0x67FD6295)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
 I (MCAL\DIO\DIO.h)(0x67FC3BEC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (HAL\LCD\LCD.h)(0x67FD3FFD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
+I (Drivers\..\MCAL\Timer0\timer0.h)(0x67FD40A9)
+I (APP\Display\display.h)(0x67FD49A8)
+I (Drivers\..\HAL\LCD\LCD.h)(0x67FD3FFD)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
@@ -13,8 +20,17 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x67F9557B)
+I (RTE\_Target_1\RTE_Components.h)(0x67FC2403)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
 F (.\MCAL\DIO\DIO.c)(0x67FC3BEC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/dio.o -MD)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
@@ -29,7 +45,7 @@ I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-p
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
 I (MCAL\DIO\DIO.h)(0x67FC3BEC)
 F (.\MCAL\DIO\DIO.h)(0x67FC3BEC)()
-F (.\MCAL\I2C\I2C.c)(0x67FC43A0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/i2c.o -MD)
+F (.\MCAL\I2C\I2C.c)(0x67FD39C2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/i2c.o -MD)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
@@ -40,7 +56,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
-I (MCAL\I2C\I2C.h)(0x67FC43A5)
+I (MCAL\I2C\I2C.h)(0x67FD39BC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
 I (Drivers\driverlib\i2c.h)(0x67FC39E0)
 I (Drivers\driverlib\sysctl.h)(0x6748CD7C)
@@ -49,15 +65,15 @@ I (Drivers\driverlib\pin_map.h)(0x6748CD7C)
 I (Drivers\inc\hw_memmap.h)(0x6748CD80)
 I (Drivers\inc\hw_types.h)(0x6748CD80)
 I (Drivers\inc\hw_i2c.h)(0x6748CD80)
-F (.\MCAL\I2C\I2C.h)(0x67FC43A5)()
-F (.\HAL\LCD\LCD.c)(0x67FC5B37)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lcd.o -MD)
-I (HAL\LCD\LCD.h)(0x67FC5B47)
+F (.\MCAL\I2C\I2C.h)(0x67FD39BC)()
+F (.\HAL\LCD\LCD.c)(0x67FD6337)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lcd.o -MD)
+I (HAL\LCD\LCD.h)(0x67FD3FFD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (Drivers\..\MCAL\Systick (for i2c)\systick.h)(0x67FC55FD)
-I (Drivers\..\MCAL\I2C\I2C.h)(0x67FC43A5)
+I (Drivers\..\MCAL\Timer0\timer0.h)(0x67FD40A9)
+I (Drivers\..\MCAL\I2C\I2C.h)(0x67FD39BC)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
 I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
@@ -74,29 +90,21 @@ I (Drivers\driverlib\pin_map.h)(0x6748CD7C)
 I (Drivers\inc\hw_memmap.h)(0x6748CD80)
 I (Drivers\inc\hw_types.h)(0x6748CD80)
 I (Drivers\inc\hw_i2c.h)(0x6748CD80)
-F (.\HAL\LCD\LCD.h)(0x67FC5B47)()
-F (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rvmdk\driverlib.lib)(0x6748CD7C)()
-F (.\MCAL\Systick (for i2c)\systick.c)(0x67FC564C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/systick.o -MD)
-I (MCAL\Systick (for i2c)\systick.h)(0x67FC55FD)
+F (.\HAL\LCD\LCD.h)(0x67FD3FFD)()
+F (.\APP\Display\display.c)(0x67FD68A5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/display.o -MD)
+I (APP\Display\display.h)(0x67FD49A8)
+I (Drivers\..\HAL\LCD\LCD.h)(0x67FD3FFD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
-I (Drivers\driverlib\i2c.h)(0x67FC39E0)
-I (Drivers\driverlib\sysctl.h)(0x6748CD7C)
-I (Drivers\driverlib\gpio.h)(0x6748CD7C)
-I (Drivers\driverlib\pin_map.h)(0x6748CD7C)
-I (Drivers\inc\hw_memmap.h)(0x6748CD80)
-I (Drivers\inc\hw_types.h)(0x6748CD80)
-I (Drivers\inc\hw_i2c.h)(0x6748CD80)
-F (.\MCAL\Systick (for i2c)\systick.h)(0x67FC55FD)()
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
+I (Drivers\..\MCAL\Timer0\timer0.h)(0x67FD40A9)
+F (.\APP\Display\display.h)(0x67FD49A8)()
+F (C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rvmdk\driverlib.lib)(0x6748CD7C)()
+F (.\MCAL\Timer0\timer0.c)(0x67FD6194)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timer0.o -MD)
+I (Drivers\inc\tm4c123gh6pm.h)(0x67FD50F5)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+F (.\MCAL\Timer0\timer0.h)(0x67FD40A9)()
 F (C:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/clib_os.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w -I ./MCAL/I2C -I ./MCAL/DIO -I ./HAL/LCD -I ./Drivers-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/Salma/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/clib_os.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
