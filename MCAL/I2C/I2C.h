@@ -1,6 +1,7 @@
 #ifndef I2C_H
 #define I2C_H
 #include <stdint.h>
+#include <stdbool.h>
 
 
 #define GPIO_PB2_I2C0SCL        0x00010803

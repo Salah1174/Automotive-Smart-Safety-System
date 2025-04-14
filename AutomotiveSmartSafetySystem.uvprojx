@@ -451,6 +451,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Systick (for i2c)</GroupName>
+          <Files>
+            <File>
+              <FileName>systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\Systick (for i2c)\systick.c</FilePath>
+            </File>
+            <File>
+              <FileName>systick.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\Systick (for i2c)\systick.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
