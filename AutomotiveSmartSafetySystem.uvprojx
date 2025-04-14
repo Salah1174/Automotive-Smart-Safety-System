@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\I2C;.\MCAL\DIO;.\HAL\LCD;.\MCAL\ADC;.\MCAL\UART0;.\MCAL\UART5</IncludePath>
+              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\DIO;.\MCAL\I2C;.\MCAL\UART0;.\MCAL\UART5;.\HAL\LCD;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -423,32 +423,32 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>LCD</GroupName>
+          <GroupName>ADC0</GroupName>
           <Files>
             <File>
-              <FileName>LCD.c</FileName>
+              <FileName>ADC0.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\HAL\LCD\LCD.c</FilePath>
+              <FilePath>.\MCAL\ADC0\ADC0.c</FilePath>
             </File>
             <File>
-              <FileName>LCD.h</FileName>
+              <FileName>ADC0.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\HAL\LCD\LCD.h</FilePath>
+              <FilePath>.\MCAL\ADC0\ADC0.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>ADC</GroupName>
+          <GroupName>ADC1</GroupName>
           <Files>
             <File>
-              <FileName>ADC.c</FileName>
+              <FileName>ADC1.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\MCAL\ADC\ADC.c</FilePath>
+              <FilePath>.\MCAL\ADC1\ADC1.c</FilePath>
             </File>
             <File>
-              <FileName>ADC.h</FileName>
+              <FileName>ADC1.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\MCAL\ADC\ADC.h</FilePath>
+              <FilePath>.\MCAL\ADC1\ADC1.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -479,6 +479,126 @@
               <FileName>uart5.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\MCAL\UART5\uart5.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Buzzer</GroupName>
+          <Files>
+            <File>
+              <FileName>Buzzer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\Buzzer\Buzzer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Buzzer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\Buzzer\Buzzer.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Doors</GroupName>
+          <Files>
+            <File>
+              <FileName>Doors.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\Doors\Doors.c</FilePath>
+            </File>
+            <File>
+              <FileName>Doors.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\Doors\Doors.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IgnitionSwitch</GroupName>
+          <Files>
+            <File>
+              <FileName>IginitionSwitch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\IginitionSwitch\IginitionSwitch.c</FilePath>
+            </File>
+            <File>
+              <FileName>IginitionSwitch.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\IginitionSwitch\IginitionSwitch.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LCD</GroupName>
+          <Files>
+            <File>
+              <FileName>LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\LCD\LCD.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LCD\LCD.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Lock</GroupName>
+          <Files>
+            <File>
+              <FileName>Lock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\Lock\Lock.c</FilePath>
+            </File>
+            <File>
+              <FileName>Lock.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\Lock\Lock.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Potentiometer</GroupName>
+          <Files>
+            <File>
+              <FileName>Potentiometer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\Potentiometer\Potentiometer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Potentiometer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\Potentiometer\Potentiometer.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Ultrasonic</GroupName>
+          <Files>
+            <File>
+              <FileName>ultrasonic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\Ultrasonic\ultrasonic.c</FilePath>
+            </File>
+            <File>
+              <FileName>ultrasonic.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\Ultrasonic\ultrasonic.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Tasks</GroupName>
+          <Files>
+            <File>
+              <FileName>Tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tasks\Tasks.c</FilePath>
+            </File>
+            <File>
+              <FileName>Tasks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tasks\Tasks.h</FilePath>
             </File>
           </Files>
         </Group>

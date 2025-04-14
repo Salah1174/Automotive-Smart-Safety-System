@@ -1,4 +1,4 @@
-#include "ADC.h"
+#include "ADC1.h"
 #include "TM4C123.h"
 
 void ADC1_Init()

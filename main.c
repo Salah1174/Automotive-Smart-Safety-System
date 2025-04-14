@@ -16,7 +16,6 @@ int main(void) {
 
     while (1) {
         adcvalue = ADC1_ReadValue();
-        // Place a breakpoint here and watch `adcvalue`
         delay_ms(1000);
     }
 
