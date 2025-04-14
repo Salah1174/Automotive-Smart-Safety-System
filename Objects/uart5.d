@@ -1,4 +1,4 @@
-./objects/main.o: main.c MCAL\ADC\ADC.h \
+./objects/uart5.o: MCAL\UART5\uart5.c MCAL\UART5\uart5.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h \
   C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h \

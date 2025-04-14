@@ -3,16 +3,16 @@
 <title>Static Call Graph - [.\Objects\AutomotiveSmartSafetySystem.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\AutomotiveSmartSafetySystem.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Sat Apr 12 02:15:09 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Mon Apr 14 20:37:09 2025
 <BR><P>
 <H3>Maximum Stack Usage =        204 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-SysTick_Handler &rArr; xPortSysTickHandler &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+SysTick_Handler &rArr; xPortSysTickHandler &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 <P>
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[7c]">__user_initial_stackheap</a>
+ <LI><a href="#[78]">__user_initial_stackheap</a>
 </UL>
 </UL>
 <P>
@@ -82,7 +82,6 @@ Mutually Recursive functions
  <LI><a href="#[41]">SSI3_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[41]">SSI3_Handler</a><BR>
  <LI><a href="#[42]">UART3_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[42]">UART3_Handler</a><BR>
  <LI><a href="#[43]">UART4_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[43]">UART4_Handler</a><BR>
- <LI><a href="#[44]">UART5_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[44]">UART5_Handler</a><BR>
  <LI><a href="#[45]">UART6_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[45]">UART6_Handler</a><BR>
  <LI><a href="#[46]">UART7_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[46]">UART7_Handler</a><BR>
  <LI><a href="#[47]">I2C2_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[47]">I2C2_Handler</a><BR>
@@ -236,7 +235,7 @@ Function Pointers
  <LI><a href="#[2b]">UART2_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[42]">UART3_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[43]">UART4_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
- <LI><a href="#[44]">UART5_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
+ <LI><a href="#[44]">UART5_Handler</a> from uart5.o(.text.UART5_Handler) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[45]">UART6_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[46]">UART7_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
  <LI><a href="#[38]">UDMAERR_Handler</a> from startup_tm4c123.o(.text) referenced from startup_tm4c123.o(RESET)
@@ -276,9 +275,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[111]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[110]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[112]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[111]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[81]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -286,7 +285,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[113]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[112]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[89]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
@@ -299,72 +298,72 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init
 </UL>
 
-<P><STRONG><a name="[114]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[113]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[115]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[114]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[116]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[115]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[117]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[116]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[118]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
+<P><STRONG><a name="[117]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000034))
 
-<P><STRONG><a name="[119]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[118]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[11a]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[119]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[11b]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[11a]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[11c]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[11b]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
-<P><STRONG><a name="[11d]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[11c]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[11e]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[11d]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[11f]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[11e]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[120]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[11f]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[121]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[120]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[122]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
+<P><STRONG><a name="[121]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000006))
 
-<P><STRONG><a name="[123]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
+<P><STRONG><a name="[122]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000010))
 
-<P><STRONG><a name="[124]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[123]"></a>__rt_lib_init_relocate_pie_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[125]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
+<P><STRONG><a name="[124]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000035))
 
-<P><STRONG><a name="[126]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[125]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[127]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
+<P><STRONG><a name="[126]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000027))
 
-<P><STRONG><a name="[128]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[127]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
 <P><STRONG><a name="[8e]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[129]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[128]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[12a]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[129]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[12b]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[12a]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[12c]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[12b]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[12d]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[12c]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[12e]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[12d]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[12f]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[12e]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[7f]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[130]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[12f]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[84]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -385,14 +384,14 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8a]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
-<LI>Call Chain = __rt_entry_main &rArr; main &rArr; DIO_Init
+<BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
+<LI>Call Chain = __rt_entry_main &rArr; main &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
-<P><STRONG><a name="[131]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[130]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[94]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -402,7 +401,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[132]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[131]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[8f]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
@@ -859,13 +858,6 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[44]"></a>UART5_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART5_Handler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART5_Handler
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
-</UL>
 <P><STRONG><a name="[45]"></a>UART6_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_tm4c123.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART6_Handler
 </UL>
@@ -1209,19 +1201,19 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[7c]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text))
+<P><STRONG><a name="[78]"></a>__user_initial_stackheap</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_tm4c123.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[f3]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text), UNUSED, KEPT)
-<BR><BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<P><STRONG><a name="[f2]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text), UNUSED, KEPT)
+<BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
 
 <P><STRONG><a name="[91]"></a>__rt_memcpy</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 
-<P><STRONG><a name="[133]"></a>_memcpy_lastbytes</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_v6.o(.text), UNUSED)
+<P><STRONG><a name="[132]"></a>_memcpy_lastbytes</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_v6.o(.text), UNUSED)
 
 <P><STRONG><a name="[a4]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecorderInitialize
@@ -1231,31 +1223,31 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecorderInitialize
 </UL>
 
-<P><STRONG><a name="[134]"></a>__rt_memclr_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[133]"></a>__rt_memclr_w</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[135]"></a>_memset_w</STRONG> (Thumb, 74 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[134]"></a>_memset_w</STRONG> (Thumb, 74 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[136]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[135]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[137]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[136]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[138]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[137]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[92]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
 </UL>
 
-<P><STRONG><a name="[139]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[138]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[13a]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[139]"></a>__rt_memcpy_w</STRONG> (Thumb, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[13b]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[13a]"></a>_memcpy_lastbytes_aligned</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[85]"></a>__user_setup_stackheap</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
 <LI>Call Chain = __user_setup_stackheap
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_initial_stackheap
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_initial_stackheap
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_perproc_libspace
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_sh
@@ -1270,7 +1262,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[13c]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[13b]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[93]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
@@ -1280,11 +1272,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[13d]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[13c]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[13e]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[13d]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[13f]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[13e]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
 <P><STRONG><a name="[83]"></a>_fp_init</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, clib_os.o(.text.$Sub$$_fp_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _fp_init
@@ -1294,20 +1286,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_fp_1
 </UL>
 
-<P><STRONG><a name="[ea]"></a>DIO_Init</STRONG> (Thumb, 768 bytes, Stack size 84 bytes, dio.o(.text.DIO_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = DIO_Init
+<P><STRONG><a name="[ea]"></a>ADC1_Init</STRONG> (Thumb, 212 bytes, Stack size 4 bytes, adc.o(.text.ADC1_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ADC1_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[eb]"></a>DIO_ReadPin</STRONG> (Thumb, 170 bytes, Stack size 24 bytes, dio.o(.text.DIO_ReadPin))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = DIO_ReadPin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[ed]"></a>DIO_WritePin</STRONG> (Thumb, 196 bytes, Stack size 28 bytes, dio.o(.text.DIO_WritePin))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = DIO_WritePin
+<P><STRONG><a name="[eb]"></a>ADC1_ReadValue</STRONG> (Thumb, 74 bytes, Stack size 4 bytes, adc.o(.text.ADC1_ReadValue))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ADC1_ReadValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1319,16 +1305,7 @@ Global Symbols
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecordItem
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventGetTS
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToDelayedList
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityDisinherit
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityInherit
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedIn
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedOut
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskIncrementTick
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSSetup
+<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSSetup
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSHeap_Free
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSHeap_Malloc
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_BlockingOnQueueSend
@@ -1370,6 +1347,15 @@ Global Symbols
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskResumeAll
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskSuspendAll_Return
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskSuspendAll
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToDelayedList
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityDisinherit
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityInherit
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedIn
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedOut
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[a9]"></a>EventRecorderEnable</STRONG> (Thumb, 146 bytes, Stack size 28 bytes, eventrecorder.o(.text.EventRecorderEnable))
@@ -1422,7 +1408,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
 
 <P><STRONG><a name="[ac]"></a>EvrFreeRTOSHeap_Malloc</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSHeap_Malloc), UNUSED, KEPT)
@@ -1430,7 +1416,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
 <P><STRONG><a name="[ad]"></a>EvrFreeRTOSQueue_BlockingOnQueueReceive</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSQueue_BlockingOnQueueReceive), UNUSED, KEPT)
@@ -1454,7 +1440,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 
 <P><STRONG><a name="[b0]"></a>EvrFreeRTOSQueue_CreateMutexFailed</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSQueue_CreateMutexFailed), UNUSED, KEPT)
@@ -1462,7 +1448,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 
 <P><STRONG><a name="[b1]"></a>EvrFreeRTOSQueue_QueueCreate</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSQueue_QueueCreate), UNUSED, KEPT)
@@ -1470,7 +1456,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
 
 <P><STRONG><a name="[b2]"></a>EvrFreeRTOSQueue_QueueCreateFailed</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSQueue_QueueCreateFailed), UNUSED, KEPT)
@@ -1478,7 +1464,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 </UL>
 
 <P><STRONG><a name="[b3]"></a>EvrFreeRTOSQueue_QueueDelete</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSQueue_QueueDelete), UNUSED, KEPT)
@@ -1537,7 +1523,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
 </UL>
 
 <P><STRONG><a name="[ba]"></a>EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList), UNUSED, KEPT)
@@ -1545,7 +1531,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
 </UL>
 
 <P><STRONG><a name="[bb]"></a>EvrFreeRTOSTasks_MovedTaskToReadyState</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_MovedTaskToReadyState))
@@ -1553,12 +1539,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[bc]"></a>EvrFreeRTOSTasks_PostMovedTaskToReadyState</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_PostMovedTaskToReadyState))
@@ -1566,12 +1552,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[bd]"></a>EvrFreeRTOSTasks_TaskIncrementTick</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_TaskIncrementTick))
@@ -1579,7 +1565,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[be]"></a>EvrFreeRTOSTasks_TaskPriorityDisinherit</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_TaskPriorityDisinherit), UNUSED, KEPT)
@@ -1587,8 +1573,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
 </UL>
 
 <P><STRONG><a name="[bf]"></a>EvrFreeRTOSTasks_TaskPriorityInherit</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_TaskPriorityInherit), UNUSED, KEPT)
@@ -1596,7 +1582,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
 </UL>
 
 <P><STRONG><a name="[c0]"></a>EvrFreeRTOSTasks_TaskSwitchedIn</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_TaskSwitchedIn))
@@ -1620,7 +1606,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
 </UL>
 
 <P><STRONG><a name="[c3]"></a>EvrFreeRTOSTasks_pvTaskIncrementMutexHeldCount_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_pvTaskIncrementMutexHeldCount_Return), UNUSED, KEPT)
@@ -1628,7 +1614,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
+<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
 </UL>
 
 <P><STRONG><a name="[c4]"></a>EvrFreeRTOSTasks_vTaskInternalSetTimeOutState</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskInternalSetTimeOutState), UNUSED, KEPT)
@@ -1636,7 +1622,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
 </UL>
 
 <P><STRONG><a name="[c5]"></a>EvrFreeRTOSTasks_vTaskInternalSetTimeOutState_Return</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskInternalSetTimeOutState_Return), UNUSED, KEPT)
@@ -1644,7 +1630,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
 </UL>
 
 <P><STRONG><a name="[c6]"></a>EvrFreeRTOSTasks_vTaskMissedYield</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskMissedYield), UNUSED, KEPT)
@@ -1652,7 +1638,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
 </UL>
 
 <P><STRONG><a name="[c7]"></a>EvrFreeRTOSTasks_vTaskMissedYield_Return</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskMissedYield_Return), UNUSED, KEPT)
@@ -1660,7 +1646,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
 </UL>
 
 <P><STRONG><a name="[c8]"></a>EvrFreeRTOSTasks_vTaskPlaceOnEventList</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskPlaceOnEventList), UNUSED, KEPT)
@@ -1668,7 +1654,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
 <P><STRONG><a name="[c9]"></a>EvrFreeRTOSTasks_vTaskPlaceOnEventList_Return</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskPlaceOnEventList_Return), UNUSED, KEPT)
@@ -1676,7 +1662,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
 <P><STRONG><a name="[ca]"></a>EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout), UNUSED, KEPT)
@@ -1684,7 +1670,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
 </UL>
 
 <P><STRONG><a name="[cb]"></a>EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout_Return</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout_Return), UNUSED, KEPT)
@@ -1692,7 +1678,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
 </UL>
 
 <P><STRONG><a name="[cc]"></a>EvrFreeRTOSTasks_vTaskSuspendAll</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskSuspendAll), UNUSED, KEPT)
@@ -1700,7 +1686,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
 
 <P><STRONG><a name="[cd]"></a>EvrFreeRTOSTasks_vTaskSuspendAll_Return</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskSuspendAll_Return), UNUSED, KEPT)
@@ -1708,7 +1694,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
 </UL>
 
 <P><STRONG><a name="[ce]"></a>EvrFreeRTOSTasks_vTaskSwitchContext</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_vTaskSwitchContext))
@@ -1732,7 +1718,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
 </UL>
 
 <P><STRONG><a name="[d1]"></a>EvrFreeRTOSTasks_xTaskCheckForTimeOut_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskCheckForTimeOut_Return), UNUSED, KEPT)
@@ -1740,7 +1726,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<BR>[Called By]<UL><LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
 </UL>
 
 <P><STRONG><a name="[d2]"></a>EvrFreeRTOSTasks_xTaskGetSchedulerState</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskGetSchedulerState))
@@ -1764,7 +1750,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[d5]"></a>EvrFreeRTOSTasks_xTaskIncrementTick_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskIncrementTick_Return))
@@ -1772,7 +1758,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
 <P><STRONG><a name="[d6]"></a>EvrFreeRTOSTasks_xTaskPriorityDisinherit</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskPriorityDisinherit), UNUSED, KEPT)
@@ -1780,7 +1766,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 </UL>
 
 <P><STRONG><a name="[d7]"></a>EvrFreeRTOSTasks_xTaskPriorityDisinherit_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskPriorityDisinherit_Return), UNUSED, KEPT)
@@ -1788,7 +1774,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 </UL>
 
 <P><STRONG><a name="[d8]"></a>EvrFreeRTOSTasks_xTaskPriorityInherit</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskPriorityInherit), UNUSED, KEPT)
@@ -1796,7 +1782,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
 </UL>
 
 <P><STRONG><a name="[d9]"></a>EvrFreeRTOSTasks_xTaskPriorityInherit_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskPriorityInherit_Return), UNUSED, KEPT)
@@ -1804,7 +1790,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<BR>[Called By]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
 </UL>
 
 <P><STRONG><a name="[da]"></a>EvrFreeRTOSTasks_xTaskRemoveFromEventList</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskRemoveFromEventList), UNUSED, KEPT)
@@ -1812,7 +1798,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 </UL>
 
 <P><STRONG><a name="[db]"></a>EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return), UNUSED, KEPT)
@@ -1820,7 +1806,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 </UL>
 
 <P><STRONG><a name="[dc]"></a>EvrFreeRTOSTasks_xTaskResumeAll</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskResumeAll), UNUSED, KEPT)
@@ -1828,7 +1814,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
 <P><STRONG><a name="[dd]"></a>EvrFreeRTOSTasks_xTaskResumeAll_Return</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, freertos_evr.o(.text.EvrFreeRTOSTasks_xTaskResumeAll_Return), UNUSED, KEPT)
@@ -1836,7 +1822,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventRecord2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, port.o(.text.PendSV_Handler))
@@ -1850,7 +1836,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cmsis_os2.o(.text.SysTick_Handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = SysTick_Handler &rArr; xPortSysTickHandler &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = SysTick_Handler &rArr; xPortSysTickHandler &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortSysTickHandler
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
@@ -1862,30 +1848,33 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(.text)
 </UL>
-<P><STRONG><a name="[79]"></a>_mutex_acquire</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_acquire), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = _mutex_acquire &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[44]"></a>UART5_Handler</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, uart5.o(.text.UART5_Handler))
+<BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
+</UL>
+<P><STRONG><a name="[7a]"></a>_mutex_acquire</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_acquire), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = _mutex_acquire &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_thread_mode
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_active
 </UL>
 
-<P><STRONG><a name="[7b]"></a>_mutex_free</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_free), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = _mutex_free &rArr; vQueueDelete &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[7c]"></a>_mutex_free</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_free), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = _mutex_free &rArr; vQueueDelete &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueDelete
 </UL>
 
-<P><STRONG><a name="[78]"></a>_mutex_initialize</STRONG> (Thumb, 168 bytes, Stack size 24 bytes, clib_os.o(.text._mutex_initialize), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = _mutex_initialize &rArr; xQueueCreateMutex &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[79]"></a>_mutex_initialize</STRONG> (Thumb, 168 bytes, Stack size 24 bytes, clib_os.o(.text._mutex_initialize), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = _mutex_initialize &rArr; xQueueCreateMutex &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_active
 </UL>
 
-<P><STRONG><a name="[7a]"></a>_mutex_release</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_release), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = _mutex_release &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[7b]"></a>_mutex_release</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_release), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = _mutex_release &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_thread_mode
@@ -1907,29 +1896,28 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8b]"></a>main</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = main &rArr; DIO_Init
+<P><STRONG><a name="[8b]"></a>main</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = main &rArr; delay_ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_WritePin
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_ReadPin
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DIO_Init
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_ReadValue
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_Init
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[fe]"></a>pvPortMalloc</STRONG> (Thumb, 446 bytes, Stack size 40 bytes, heap_4.o(.text.pvPortMalloc), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[fd]"></a>pvPortMalloc</STRONG> (Thumb, 446 bytes, Stack size 40 bytes, heap_4.o(.text.pvPortMalloc), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvHeapInit
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSHeap_Malloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 </UL>
 
-<P><STRONG><a name="[102]"></a>pvTaskIncrementMutexHeldCount</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, tasks.o(.text.pvTaskIncrementMutexHeldCount), UNUSED, KEPT)
+<P><STRONG><a name="[101]"></a>pvTaskIncrementMutexHeldCount</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, tasks.o(.text.pvTaskIncrementMutexHeldCount), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = pvTaskIncrementMutexHeldCount &rArr; EvrFreeRTOSTasks_pvTaskIncrementMutexHeldCount_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_pvTaskIncrementMutexHeldCount_Return
@@ -1938,81 +1926,81 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[ef]"></a>uxListRemove</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, list.o(.text.uxListRemove), UNUSED, KEPT)
+<P><STRONG><a name="[ee]"></a>uxListRemove</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, list.o(.text.uxListRemove), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = uxListRemove
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
 </UL>
 
-<P><STRONG><a name="[108]"></a>vApplicationStackOverflowHook</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os2.o(.text.vApplicationStackOverflowHook))
+<P><STRONG><a name="[107]"></a>vApplicationStackOverflowHook</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cmsis_os2.o(.text.vApplicationStackOverflowHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = vApplicationStackOverflowHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSwitchContext
 </UL>
 
-<P><STRONG><a name="[10c]"></a>vListInitialise</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, list.o(.text.vListInitialise), UNUSED, KEPT)
+<P><STRONG><a name="[10b]"></a>vListInitialise</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, list.o(.text.vListInitialise), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = vListInitialise
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 </UL>
 
-<P><STRONG><a name="[f0]"></a>vListInsert</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, list.o(.text.vListInsert), UNUSED, KEPT)
+<P><STRONG><a name="[ef]"></a>vListInsert</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, list.o(.text.vListInsert), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 
-<P><STRONG><a name="[f8]"></a>vPortEnterCritical</STRONG> (Thumb, 48 bytes, Stack size 4 bytes, port.o(.text.vPortEnterCritical), UNUSED, KEPT)
+<P><STRONG><a name="[f7]"></a>vPortEnterCritical</STRONG> (Thumb, 48 bytes, Stack size 4 bytes, port.o(.text.vPortEnterCritical), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
 </UL>
 
-<P><STRONG><a name="[f9]"></a>vPortExitCritical</STRONG> (Thumb, 38 bytes, Stack size 4 bytes, port.o(.text.vPortExitCritical), UNUSED, KEPT)
+<P><STRONG><a name="[f8]"></a>vPortExitCritical</STRONG> (Thumb, 38 bytes, Stack size 4 bytes, port.o(.text.vPortExitCritical), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = vPortExitCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
 </UL>
 
-<P><STRONG><a name="[103]"></a>vPortFree</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, heap_4.o(.text.vPortFree), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[102]"></a>vPortFree</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, heap_4.o(.text.vPortFree), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInsertBlockIntoFreeList
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSHeap_Free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueDelete
 </UL>
 
 <P><STRONG><a name="[e6]"></a>vQueueDelete</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, queue.o(.text.vQueueDelete), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = vQueueDelete &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 260<LI>Call Chain = vQueueDelete &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
 </UL>
 
-<P><STRONG><a name="[105]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, tasks.o(.text.vTaskInternalSetTimeOutState), UNUSED, KEPT)
+<P><STRONG><a name="[104]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, tasks.o(.text.vTaskInternalSetTimeOutState), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = vTaskInternalSetTimeOutState &rArr; EvrFreeRTOSTasks_vTaskInternalSetTimeOutState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskInternalSetTimeOutState_Return
@@ -2020,23 +2008,23 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
 </UL>
 
-<P><STRONG><a name="[fd]"></a>vTaskMissedYield</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, tasks.o(.text.vTaskMissedYield), UNUSED, KEPT)
+<P><STRONG><a name="[fc]"></a>vTaskMissedYield</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, tasks.o(.text.vTaskMissedYield), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = vTaskMissedYield &rArr; EvrFreeRTOSTasks_vTaskMissedYield_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskMissedYield_Return
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskMissedYield
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 </UL>
 
-<P><STRONG><a name="[106]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, tasks.o(.text.vTaskPlaceOnEventList), UNUSED, KEPT)
+<P><STRONG><a name="[105]"></a>vTaskPlaceOnEventList</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, tasks.o(.text.vTaskPlaceOnEventList), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = vTaskPlaceOnEventList &rArr; prvAddCurrentTaskToDelayedList &rArr; EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvAddCurrentTaskToDelayedList
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskPlaceOnEventList_Return
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskPlaceOnEventList
 </UL>
@@ -2044,27 +2032,27 @@ Global Symbols
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[107]"></a>vTaskPriorityDisinheritAfterTimeout</STRONG> (Thumb, 346 bytes, Stack size 40 bytes, tasks.o(.text.vTaskPriorityDisinheritAfterTimeout), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = vTaskPriorityDisinheritAfterTimeout &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[106]"></a>vTaskPriorityDisinheritAfterTimeout</STRONG> (Thumb, 346 bytes, Stack size 40 bytes, tasks.o(.text.vTaskPriorityDisinheritAfterTimeout), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = vTaskPriorityDisinheritAfterTimeout &rArr; EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityDisinherit
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout_Return
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityDisinherit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[ff]"></a>vTaskSuspendAll</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, tasks.o(.text.vTaskSuspendAll), UNUSED, KEPT)
+<P><STRONG><a name="[fe]"></a>vTaskSuspendAll</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, tasks.o(.text.vTaskSuspendAll), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = vTaskSuspendAll &rArr; EvrFreeRTOSTasks_vTaskSuspendAll_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskSuspendAll_Return
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskSuspendAll
 </UL>
-<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
@@ -2072,122 +2060,122 @@ Global Symbols
 <P><STRONG><a name="[7d]"></a>vTaskSwitchContext</STRONG> (Thumb, 326 bytes, Stack size 32 bytes, tasks.o(.text.vTaskSwitchContext))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = vTaskSwitchContext &rArr; EvrFreeRTOSTasks_TaskSwitchedIn &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedIn
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedOut
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationStackOverflowHook
+<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vApplicationStackOverflowHook
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskSwitchContext_Return
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_vTaskSwitchContext
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedIn
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskSwitchedOut
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PendSV_Handler
 </UL>
 
 <P><STRONG><a name="[e1]"></a>xPortSysTickHandler</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, port.o(.text.xPortSysTickHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = xPortSysTickHandler &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = xPortSysTickHandler &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
 <P><STRONG><a name="[e8]"></a>xQueueCreateMutex</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, queue.o(.text.xQueueCreateMutex), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = xQueueCreateMutex &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 324<LI>Call Chain = xQueueCreateMutex &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[e7]"></a>xQueueCreateMutexStatic</STRONG> (Thumb, 50 bytes, Stack size 32 bytes, queue.o(.text.xQueueCreateMutexStatic), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = xQueueCreateMutexStatic &rArr; prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = xQueueCreateMutexStatic &rArr; prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
-<P><STRONG><a name="[10a]"></a>xQueueGenericCreate</STRONG> (Thumb, 142 bytes, Stack size 40 bytes, queue.o(.text.xQueueGenericCreate), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[109]"></a>xQueueGenericCreate</STRONG> (Thumb, 142 bytes, Stack size 40 bytes, queue.o(.text.xQueueGenericCreate), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
-<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueCreateFailed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
 </UL>
 
-<P><STRONG><a name="[10b]"></a>xQueueGenericCreateStatic</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, queue.o(.text.xQueueGenericCreateStatic), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = xQueueGenericCreateStatic &rArr; prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[10a]"></a>xQueueGenericCreateStatic</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, queue.o(.text.xQueueGenericCreateStatic), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = xQueueGenericCreateStatic &rArr; prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
 </UL>
 
-<P><STRONG><a name="[f6]"></a>xQueueGenericReset</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, queue.o(.text.xQueueGenericReset), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = xQueueGenericReset &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[f5]"></a>xQueueGenericReset</STRONG> (Thumb, 208 bytes, Stack size 24 bytes, queue.o(.text.xQueueGenericReset), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = xQueueGenericReset &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInitialise
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
+<BR>[Called By]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseNewQueue
 </UL>
 
 <P><STRONG><a name="[e9]"></a>xQueueGenericSend</STRONG> (Thumb, 386 bytes, Stack size 48 bytes, queue.o(.text.xQueueGenericSend), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueFull
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_BlockingOnQueueSend
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueSendFailed
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueSend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 
 <P><STRONG><a name="[e5]"></a>xQueueSemaphoreTake</STRONG> (Thumb, 438 bytes, Stack size 48 bytes, queue.o(.text.xQueueSemaphoreTake), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvGetDisinheritPriorityAfterTimeout
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskSuspendAll
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPriorityDisinheritAfterTimeout
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityInherit
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvTaskIncrementMutexHeldCount
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskCheckForTimeOut
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvGetDisinheritPriorityAfterTimeout
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvIsQueueEmpty
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_BlockingOnQueueReceive
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueReceiveFailed
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueReceive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
-<P><STRONG><a name="[10d]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 210 bytes, Stack size 32 bytes, tasks.o(.text.xTaskCheckForTimeOut), UNUSED, KEPT)
+<P><STRONG><a name="[10c]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 210 bytes, Stack size 32 bytes, tasks.o(.text.xTaskCheckForTimeOut), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = xTaskCheckForTimeOut &rArr; vTaskInternalSetTimeOutState &rArr; EvrFreeRTOSTasks_vTaskInternalSetTimeOutState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskInternalSetTimeOutState
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskCheckForTimeOut_Return
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskCheckForTimeOut
 </UL>
@@ -2205,74 +2193,74 @@ Global Symbols
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_active
 </UL>
 
-<P><STRONG><a name="[109]"></a>xTaskIncrementTick</STRONG> (Thumb, 642 bytes, Stack size 40 bytes, tasks.o(.text.xTaskIncrementTick))
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[108]"></a>xTaskIncrementTick</STRONG> (Thumb, 642 bytes, Stack size 40 bytes, tasks.o(.text.xTaskIncrementTick))
+<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskIncrementTick
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskIncrementTick_Return
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskIncrementTick
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskIncrementTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortSysTickHandler
 </UL>
 
-<P><STRONG><a name="[f2]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 274 bytes, Stack size 24 bytes, tasks.o(.text.xTaskPriorityDisinherit), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = xTaskPriorityDisinherit &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[f1]"></a>xTaskPriorityDisinherit</STRONG> (Thumb, 274 bytes, Stack size 24 bytes, tasks.o(.text.xTaskPriorityDisinherit), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = xTaskPriorityDisinherit &rArr; EvrFreeRTOSTasks_xTaskPriorityDisinherit_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityDisinherit
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskPriorityDisinherit_Return
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskPriorityDisinherit
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityDisinherit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
+<BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvCopyDataToQueue
 </UL>
 
-<P><STRONG><a name="[10e]"></a>xTaskPriorityInherit</STRONG> (Thumb, 390 bytes, Stack size 24 bytes, tasks.o(.text.xTaskPriorityInherit), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = xTaskPriorityInherit &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[10d]"></a>xTaskPriorityInherit</STRONG> (Thumb, 390 bytes, Stack size 24 bytes, tasks.o(.text.xTaskPriorityInherit), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = xTaskPriorityInherit &rArr; EvrFreeRTOSTasks_xTaskPriorityInherit_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityInherit
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskPriorityInherit_Return
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskPriorityInherit
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_TaskPriorityInherit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[fc]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 430 bytes, Stack size 40 bytes, tasks.o(.text.xTaskRemoveFromEventList), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[fb]"></a>xTaskRemoveFromEventList</STRONG> (Thumb, 430 bytes, Stack size 40 bytes, tasks.o(.text.xTaskRemoveFromEventList), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 180<LI>Call Chain = xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return
+<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskRemoveFromEventList
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvUnlockQueue
 </UL>
 
-<P><STRONG><a name="[101]"></a>xTaskResumeAll</STRONG> (Thumb, 596 bytes, Stack size 40 bytes, tasks.o(.text.xTaskResumeAll), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[100]"></a>xTaskResumeAll</STRONG> (Thumb, 596 bytes, Stack size 40 bytes, tasks.o(.text.xTaskResumeAll), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvResetNextTaskUnblockTime
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskResumeAll_Return
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_xTaskResumeAll
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_PostMovedTaskToReadyState
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToReadyState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
@@ -2281,9 +2269,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_init
 </UL>
 
-<P><STRONG><a name="[140]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[13f]"></a>__fplib_config_fpu_vfp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
-<P><STRONG><a name="[141]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[140]"></a>__fplib_config_pureend_doubles</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -2293,16 +2281,16 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[e4]"></a>is_thread_mode</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, clib_os.o(.text.is_thread_mode), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = is_thread_mode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
 <P><STRONG><a name="[a5]"></a>crc16_ccitt</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, eventrecorder.o(.text.crc16_ccitt))
@@ -2425,30 +2413,30 @@ Local Symbols
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetRecordIndex
 </UL>
 
-<P><STRONG><a name="[100]"></a>prvHeapInit</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, heap_4.o(.text.prvHeapInit), UNUSED, KEPT)
+<P><STRONG><a name="[ff]"></a>prvHeapInit</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, heap_4.o(.text.prvHeapInit), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = prvHeapInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
+<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pvPortMalloc
 </UL>
 
-<P><STRONG><a name="[104]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 216 bytes, Stack size 12 bytes, heap_4.o(.text.prvInsertBlockIntoFreeList), UNUSED, KEPT)
+<P><STRONG><a name="[103]"></a>prvInsertBlockIntoFreeList</STRONG> (Thumb, 216 bytes, Stack size 12 bytes, heap_4.o(.text.prvInsertBlockIntoFreeList), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = prvInsertBlockIntoFreeList
 </UL>
-<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
+<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 </UL>
 
-<P><STRONG><a name="[f5]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, queue.o(.text.prvInitialiseNewQueue), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 228<LI>Call Chain = prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[f4]"></a>prvInitialiseNewQueue</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, queue.o(.text.prvInitialiseNewQueue), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 228<LI>Call Chain = prvInitialiseNewQueue &rArr; xQueueGenericReset &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericReset
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueCreate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
+<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
 </UL>
 
-<P><STRONG><a name="[f4]"></a>prvInitialiseMutex</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, queue.o(.text.prvInitialiseMutex), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[f3]"></a>prvInitialiseMutex</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, queue.o(.text.prvInitialiseMutex), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = prvInitialiseMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_CreateMutexFailed
@@ -2458,65 +2446,65 @@ Local Symbols
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
 </UL>
 
-<P><STRONG><a name="[f1]"></a>prvCopyDataToQueue</STRONG> (Thumb, 204 bytes, Stack size 32 bytes, queue.o(.text.prvCopyDataToQueue), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[f0]"></a>prvCopyDataToQueue</STRONG> (Thumb, 204 bytes, Stack size 32 bytes, queue.o(.text.prvCopyDataToQueue), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = prvCopyDataToQueue &rArr; xTaskPriorityDisinherit &rArr; EvrFreeRTOSTasks_xTaskPriorityDisinherit_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
+<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskPriorityDisinherit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[fa]"></a>prvIsQueueFull</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, queue.o(.text.prvIsQueueFull), UNUSED, KEPT)
+<P><STRONG><a name="[f9]"></a>prvIsQueueFull</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, queue.o(.text.prvIsQueueFull), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = prvIsQueueFull &rArr; vPortExitCritical
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 </UL>
 
-<P><STRONG><a name="[fb]"></a>prvUnlockQueue</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, queue.o(.text.prvUnlockQueue), UNUSED, KEPT)
-<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = prvUnlockQueue &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_PostMovedTaskToReadyState &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
+<P><STRONG><a name="[fa]"></a>prvUnlockQueue</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, queue.o(.text.prvUnlockQueue), UNUSED, KEPT)
+<BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = prvUnlockQueue &rArr; xTaskRemoveFromEventList &rArr; EvrFreeRTOSTasks_xTaskRemoveFromEventList_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskMissedYield
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskRemoveFromEventList
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[f7]"></a>prvIsQueueEmpty</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, queue.o(.text.prvIsQueueEmpty), UNUSED, KEPT)
+<P><STRONG><a name="[f6]"></a>prvIsQueueEmpty</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, queue.o(.text.prvIsQueueEmpty), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = prvIsQueueEmpty &rArr; vPortExitCritical
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[10f]"></a>prvGetDisinheritPriorityAfterTimeout</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, queue.o(.text.prvGetDisinheritPriorityAfterTimeout), UNUSED, KEPT)
+<P><STRONG><a name="[10e]"></a>prvGetDisinheritPriorityAfterTimeout</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, queue.o(.text.prvGetDisinheritPriorityAfterTimeout), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = prvGetDisinheritPriorityAfterTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 </UL>
 
-<P><STRONG><a name="[110]"></a>prvResetNextTaskUnblockTime</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, tasks.o(.text.prvResetNextTaskUnblockTime))
-<BR><BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
+<P><STRONG><a name="[10f]"></a>prvResetNextTaskUnblockTime</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, tasks.o(.text.prvResetNextTaskUnblockTime))
+<BR><BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskResumeAll
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskIncrementTick
 </UL>
 
-<P><STRONG><a name="[ee]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 290 bytes, Stack size 48 bytes, tasks.o(.text.prvAddCurrentTaskToDelayedList), UNUSED, KEPT)
+<P><STRONG><a name="[ed]"></a>prvAddCurrentTaskToDelayedList</STRONG> (Thumb, 290 bytes, Stack size 48 bytes, tasks.o(.text.prvAddCurrentTaskToDelayedList), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = prvAddCurrentTaskToDelayedList &rArr; EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToOverflowDelayedList
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSTasks_MovedTaskToDelayedList
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uxListRemove
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vListInsert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
+<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskPlaceOnEventList
 </UL>
 <P>
 <H3>

@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\I2C;.\MCAL\DIO;.\HAL\LCD</IncludePath>
+              <IncludePath>.\MCAL\I2C;.\MCAL\DIO;.\HAL\LCD;.\MCAL\ADC;.\MCAL\UART0;.\MCAL\UART5</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -434,6 +434,51 @@
               <FileName>LCD.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\HAL\LCD\LCD.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ADC</GroupName>
+          <Files>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\ADC\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\ADC\ADC.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UART0</GroupName>
+          <Files>
+            <File>
+              <FileName>uart0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\UART0\uart0.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart0.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\UART0\uart0.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UART5</GroupName>
+          <Files>
+            <File>
+              <FileName>uart5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\UART5\uart5.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart5.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\UART5\uart5.h</FilePath>
             </File>
           </Files>
         </Group>
