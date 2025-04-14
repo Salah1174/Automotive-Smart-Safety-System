@@ -1,4 +1,4 @@
-#include "ADC.h"
+#include "ADC1.h"
 #include "LCD.h"
 #include "APP/Display/display.h"
 #include "TM4C123.h"
@@ -55,4 +55,5 @@ while (true) {
     }
 
 //    return 0;
+}
 }

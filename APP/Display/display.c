@@ -24,6 +24,5 @@ void Display_Task(LCD_I2C *lcdDisplay) {
     // Move the cursor to the second line and print another message
     command(lcdDisplay, 0xC0); // Move cursor to the second line
     print(lcdDisplay, "Welcome!");
-		noCursor(lcdDisplay);
-		command(lcdDisplay, LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT);
+
 }

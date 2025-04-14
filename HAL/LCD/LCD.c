@@ -88,6 +88,7 @@ void begin(LCD_I2C *display ){
 	
 	// turn the display on with no cursor or blinking default
 	display->_displaycontrol = LCD_DISPLAYON | LCD_CURSOROFF | LCD_BLINKOFF;
+
 	configDisplay(display);
 	
 	// clear it off

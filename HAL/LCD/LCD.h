@@ -28,7 +28,7 @@
 #define LCD_DISPLAYON 0x04
 #define LCD_DISPLAYOFF 0x00
 #define LCD_CURSORON 0x02
-#define LCD_CURSOROFF 0x00
+//#define LCD_CURSOROFF 0x00
 #define LCD_BLINKON 0x01
 #define LCD_BLINKOFF 0x00
 
@@ -49,6 +49,8 @@
 // flags for backlight control
 #define LCD_BACKLIGHT 0x08
 #define LCD_NOBACKLIGHT 0x00
+
+#define LCD_CURSOROFF 0x0c
 
 #define En 4  // Enable bit
 #define Rw 2  // Read/Write bit
