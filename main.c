@@ -21,8 +21,14 @@ int main() {
     LCD_I2C lcdDisplay;
     LCDI2CInit(&lcdDisplay, 0x27, 16, 2); // Address: 0x27, 16 columns, 2 rows
 
-    // Set the display to be on, no cursor, no blinking
-    Display_Task(&lcdDisplay);
+    // call app?
+	
+	//d gear
+    D_Display(&lcdDisplay);
+//		R_Display(&lcdDisplay);
+	
+	//alert
+//	Alert_Display(&lcdDisplay);
 
     ADC1_Init();
     uint32_t adcvalue = 0;

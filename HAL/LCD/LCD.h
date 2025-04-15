@@ -92,6 +92,8 @@ void noAutoscroll(LCD_I2C *display  );
 size_t printChar(LCD_I2C *display, const char c  );
 size_t print(LCD_I2C *display, const char* str  );
 
+
+void setCursor(LCD_I2C *display,uint8_t col, uint8_t row);
 //*********** Low-level LCD functions **************
 void command(LCD_I2C *display, uint8_t value );
 void send(LCD_I2C *display, uint8_t value, uint8_t mode );

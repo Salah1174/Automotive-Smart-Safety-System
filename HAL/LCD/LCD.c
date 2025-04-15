@@ -118,6 +118,14 @@ void home(LCD_I2C *display ){
 	timer0A_delayMs(2);   // this command takes a long time!
 }
 
+void setCursor(LCD_I2C *display,uint8_t col, uint8_t row){
+	int row_offsets[] = { 0x00, 0x40, 0x14 -(20 - 16), 0x54 -(20 - 16)};
+	if (row > 2) {
+		row = 2-1;    // we count rows starting w/0
+	}
+	 command(display,LCD_SETDDRAMADDR | (col + row_offsets[row]));
+}
+
 // Turns the underline cursor on/off
 void noCursor(LCD_I2C *display  ) {
 	display->_displaycontrol &= ~LCD_CURSORON;
