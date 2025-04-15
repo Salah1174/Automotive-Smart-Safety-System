@@ -4,9 +4,6 @@
  *
  * File Name: NVIC.h
  *
- * Description: Header file for the ARM Cortex M4 NVIC driver
- *
- * Author: Mohamed Tarek (Edges For Training)
  *
  *******************************************************************************/
 
