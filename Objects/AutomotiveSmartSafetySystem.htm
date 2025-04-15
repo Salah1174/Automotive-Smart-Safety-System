@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\AutomotiveSmartSafetySystem.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\AutomotiveSmartSafetySystem.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Tue Apr 15 21:46:04 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Tue Apr 15 22:08:17 2025
 <BR><P>
 <H3>Maximum Stack Usage =        216 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1919,7 +1919,7 @@ Global Symbols
 <P><STRONG><a name="[44]"></a>UART5_Handler</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, uart5.o(.text.UART5_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_tm4c123.o(RESET)
 </UL>
-<P><STRONG><a name="[7b]"></a>_mutex_acquire</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_acquire), UNUSED, KEPT)
+<P><STRONG><a name="[79]"></a>_mutex_acquire</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_acquire), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = _mutex_acquire &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
@@ -1927,13 +1927,13 @@ Global Symbols
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_active
 </UL>
 
-<P><STRONG><a name="[79]"></a>_mutex_free</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_free), UNUSED, KEPT)
+<P><STRONG><a name="[7b]"></a>_mutex_free</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_free), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = _mutex_free &rArr; vQueueDelete &rArr; vPortFree &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vQueueDelete
 </UL>
 
-<P><STRONG><a name="[7a]"></a>_mutex_initialize</STRONG> (Thumb, 168 bytes, Stack size 24 bytes, clib_os.o(.text._mutex_initialize), UNUSED, KEPT)
+<P><STRONG><a name="[78]"></a>_mutex_initialize</STRONG> (Thumb, 168 bytes, Stack size 24 bytes, clib_os.o(.text._mutex_initialize), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 348<LI>Call Chain = _mutex_initialize &rArr; xQueueCreateMutex &rArr; xQueueGenericCreate &rArr; pvPortMalloc &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
@@ -1941,7 +1941,7 @@ Global Symbols
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_active
 </UL>
 
-<P><STRONG><a name="[78]"></a>_mutex_release</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_release), UNUSED, KEPT)
+<P><STRONG><a name="[7a]"></a>_mutex_release</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, clib_os.o(.text._mutex_release), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = _mutex_release &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2 &rArr; EventRecordItem &rArr; UnlockRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
@@ -2177,7 +2177,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortFree
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
 </UL>
 
 <P><STRONG><a name="[125]"></a>vTaskInternalSetTimeOutState</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, tasks_1.o(.text.vTaskInternalSetTimeOutState), UNUSED, KEPT)
@@ -2289,7 +2289,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreate
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[fd]"></a>xQueueCreateMutexStatic</STRONG> (Thumb, 50 bytes, Stack size 32 bytes, queue.o(.text.xQueueCreateMutexStatic), UNUSED, KEPT)
@@ -2298,7 +2298,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericCreateStatic
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[12b]"></a>xQueueGenericCreate</STRONG> (Thumb, 142 bytes, Stack size 40 bytes, queue.o(.text.xQueueGenericCreate), UNUSED, KEPT)
@@ -2348,7 +2348,7 @@ Global Symbols
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueSendFailed
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueSend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvInitialiseMutex
 </UL>
 
@@ -2373,7 +2373,7 @@ Global Symbols
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueReceiveFailed
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrFreeRTOSQueue_QueueReceive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
 <P><STRONG><a name="[12e]"></a>xTaskCheckForTimeOut</STRONG> (Thumb, 210 bytes, Stack size 32 bytes, tasks_1.o(.text.xTaskCheckForTimeOut), UNUSED, KEPT)
@@ -2561,16 +2561,16 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetSchedulerState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[fa]"></a>is_thread_mode</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, clib_os.o(.text.is_thread_mode), UNUSED, KEPT)
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = is_thread_mode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
 <P><STRONG><a name="[aa]"></a>crc16_ccitt</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, eventrecorder.o(.text.crc16_ccitt))

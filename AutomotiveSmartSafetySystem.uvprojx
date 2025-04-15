@@ -643,6 +643,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>PushButton</GroupName>
+          <Files>
+            <File>
+              <FileName>PushButton.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\PushButton\PushButton.c</FilePath>
+            </File>
+            <File>
+              <FileName>PushButton.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\PushButton\PushButton.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
