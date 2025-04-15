@@ -38,7 +38,8 @@ void LCDI2CInit(LCD_I2C *display, uint8_t lcd_address, uint8_t lcd_cols, uint8_t
 //    }
 
 //	SysTick_Init(&systickConfig);
-	Timer0_Init();
+	Timer0A_Init();
+	Timer0B_Init();
 	display->_Addr = lcd_address;
 	display->_cols = lcd_cols;
 	display->_rows = lcd_rows;
@@ -57,11 +58,11 @@ void begin(LCD_I2C *display ){
 	// SEE PAGE 45/46 FOR INITIALIZATION SPECIFICATION!
 	// according to datasheet, we need at least 40ms after power rises above 2.7V
 	// before sending commands. Arduino can turn on way befer 4.5V so we'll wait 50
-	timer0A_delayMs(50); 
+	timer0A_delayMs(10); 
 	
 	// Now we pull both RS and R/W low to begin commands
 	expanderWrite(display, display->_backlightval);	// reset expanderand turn backlight off (Bit 8 =1)
-	timer0A_delayMs(100); 
+	timer0A_delayMs(50); 
 
   //put the LCD into 4 bit mode
 	// this is according to the hitachi HD44780 datasheet
@@ -69,15 +70,15 @@ void begin(LCD_I2C *display ){
 	
 	// we start in 8bit mode, try to set 4 bit mode
   write4bits(display, 0x03 << 4 );
-  timer0A_delayMs(4);  // wait min 4.1ms
+  timer0A_delayMs(10);  // wait min 4.1ms
    
   // second try
   write4bits(display, 0x03 << 4);
-  timer0A_delayMs(4);  // wait min 4.1ms
+  timer0A_delayMs(10);  // wait min 4.1ms
    
   // third go!
   write4bits(display, 0x03 << 4 ); 
-  timer0A_delayMs(1); 
+  timer0A_delayMs(10); 
    
   // finally, set to 4-bit interface
   write4bits(display, 0x02 << 4 ); 
@@ -110,12 +111,12 @@ void configDisplay(LCD_I2C *display ) {
 
 void clear(LCD_I2C *display){
 	command(display, LCD_CLEARDISPLAY);// clear display, set cursor position to zero
-	timer0A_delayMs(2);   // this command takes a long time!
+	timer0A_delayMs(10);   // this command takes a long time!
 }
 
 void home(LCD_I2C *display ){
 	command(display, LCD_RETURNHOME);  // set cursor position to zero
-	timer0A_delayMs(2);   // this command takes a long time!
+	timer0A_delayMs(10);   // this command takes a long time!
 }
 
 void setCursor(LCD_I2C *display,uint8_t col, uint8_t row){
@@ -131,35 +132,35 @@ void noCursor(LCD_I2C *display  ) {
 	display->_displaycontrol &= ~LCD_CURSORON;
 	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
 }
-void cursor(LCD_I2C *display  ) {
-	display->_displaycontrol |= LCD_CURSORON;
-	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
-}
+//void cursor(LCD_I2C *display  ) {
+//	display->_displaycontrol |= LCD_CURSORON;
+//	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
+//}
 
 void backlight(LCD_I2C *display) {
 	display->_backlightval=LCD_BACKLIGHT;
 	expanderWrite(display, 0);
 }
 
-void noBacklight(LCD_I2C *display) {
-	display->_backlightval=LCD_NOBACKLIGHT;
-	expanderWrite(display, 0);
-}
+//void noBacklight(LCD_I2C *display) {
+//	display->_backlightval=LCD_NOBACKLIGHT;
+//	expanderWrite(display, 0);
+//}
 
-void noBlink(LCD_I2C *display  ) {
-	display->_displaycontrol &= ~LCD_BLINKON;
-	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
-}
+//void noBlink(LCD_I2C *display  ) {
+//	display->_displaycontrol &= ~LCD_BLINKON;
+//	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
+//}
 
-void blink(LCD_I2C *display  ) {
-	display->_displaycontrol |= LCD_BLINKON;
-	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
-}
+//void blink(LCD_I2C *display  ) {
+//	display->_displaycontrol |= LCD_BLINKON;
+//	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol );
+//}
 
 // These commands scroll the display without changing the RAM
-void scrollDisplayLeft(LCD_I2C *display) {
-	command(display, LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT );
-}
+//void scrollDisplayLeft(LCD_I2C *display) {
+//	command(display, LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT );
+//}
 void scrollDisplayRight(LCD_I2C *display ) {
 	command(display, LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVERIGHT );
 }
@@ -175,28 +176,28 @@ void display(LCD_I2C *display) {
 }
 
 // This is for text that flows Left to Right
-void leftToRight(LCD_I2C *display  ) {
-	display->_displaymode |= LCD_ENTRYLEFT;
-	command(display, LCD_ENTRYMODESET | display->_displaymode );
-}
+//void leftToRight(LCD_I2C *display  ) {
+//	display->_displaymode |= LCD_ENTRYLEFT;
+//	command(display, LCD_ENTRYMODESET | display->_displaymode );
+//}
 
-// This is for text that flows Right to Left
-void rightToLeft(LCD_I2C *display  ) {
-	display->_displaymode &= ~LCD_ENTRYLEFT;
-	command(display, LCD_ENTRYMODESET | display->_displaymode );
-}
+//// This is for text that flows Right to Left
+//void rightToLeft(LCD_I2C *display  ) {
+//	display->_displaymode &= ~LCD_ENTRYLEFT;
+//	command(display, LCD_ENTRYMODESET | display->_displaymode );
+//}
 
 // This will 'right justify' text from the cursor
-void autoscroll(LCD_I2C *display  ) {
-	display->_displaymode |= LCD_ENTRYSHIFTINCREMENT;
-	command(display, LCD_ENTRYMODESET | display->_displaymode );
-}
+//void autoscroll(LCD_I2C *display  ) {
+//	display->_displaymode |= LCD_ENTRYSHIFTINCREMENT;
+//	command(display, LCD_ENTRYMODESET | display->_displaymode );
+//}
 
-// This will 'left justify' text from the cursor
-void noAutoscroll(LCD_I2C *display ) {
-	display->_displaymode &= ~LCD_ENTRYSHIFTINCREMENT;
-	command(display, LCD_ENTRYMODESET | display->_displaymode );
-}
+//// This will 'left justify' text from the cursor
+//void noAutoscroll(LCD_I2C *display ) {
+//	display->_displaymode &= ~LCD_ENTRYSHIFTINCREMENT;
+//	command(display, LCD_ENTRYMODESET | display->_displaymode );
+//}
 
 size_t printChar(LCD_I2C *display, const char c ){
 	return write(display, c );

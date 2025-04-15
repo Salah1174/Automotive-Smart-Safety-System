@@ -23,12 +23,12 @@ int main() {
 
     // call app?
 	
-	//d gear
-    D_Display(&lcdDisplay);
+		//gear
+//    D_Display(&lcdDisplay);
 //		R_Display(&lcdDisplay);
 	
-	//alert
-//	Alert_Display(&lcdDisplay);
+		//alert
+	Alert_Display(&lcdDisplay);
 
     ADC1_Init();
     uint32_t adcvalue = 0;

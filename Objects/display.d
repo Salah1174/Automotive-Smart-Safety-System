@@ -4,4 +4,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   Tasks\..\MCAL\Timer0\timer0.h Tasks\..\HAL\ULTRASONIC\ultrasonic.h \
-  Tasks\..\HAL\Doors\Doors.h Tasks\..\HAL\Potentiometer\Potentiometer.h
+  Tasks\..\HAL\Doors\Doors.h Tasks\..\HAL\Potentiometer\Potentiometer.h \
+  Drivers\inc\tm4c123gh6pm.h Drivers\driverlib\sysctl.h

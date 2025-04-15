@@ -13,4 +13,5 @@
   C:\Users\Salma\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h \
   Drivers\driverlib\i2c.h Drivers\driverlib\sysctl.h \
   Drivers\driverlib\gpio.h Drivers\driverlib\pin_map.h \
-  Drivers\inc\hw_memmap.h Drivers\inc\hw_types.h Drivers\inc\hw_i2c.h
+  Drivers\inc\hw_memmap.h Drivers\inc\hw_types.h Drivers\inc\hw_i2c.h \
+  Drivers\inc\\tm4c123gh6pm.h
