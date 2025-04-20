@@ -5,10 +5,10 @@
 
 void Display_Test(LCD_I2C *lcdDisplay);
 
-
-void D_Display(LCD_I2C *lcdDisplay);
-void R_Display(LCD_I2C *lcdDisplay);
+void D_Display(LCD_I2C *lcdDisplay, uint32_t speedValue, uint8_t doorStatus,uint8_t lockStatus);
+void R_Display(LCD_I2C *lcdDisplay, uint32_t distanceValue,uint8_t carStarted);
 void Alert_Display(LCD_I2C *lcdDisplay);
-
+void carOn_Display(LCD_I2C *lcdDisplay);
+void carOff_Display(LCD_I2C *lcdDisplay);
 
 #endif

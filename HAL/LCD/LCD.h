@@ -1,7 +1,6 @@
 #ifndef LCD_H
 #define LCD_H
 
-
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -50,14 +49,15 @@
 #define LCD_BACKLIGHT 0x08
 #define LCD_NOBACKLIGHT 0x00
 
-//#define LCD_CURSOROFF 0x0c
+// #define LCD_CURSOROFF 0x0c
 
-#define En 4  // Enable bit
-#define Rw 2  // Read/Write bit
-#define Rs 1  // Register select bit
+#define En 4 // Enable bit
+#define Rw 2 // Read/Write bit
+#define Rs 1 // Register select bit
 
-typedef struct {
-	uint8_t _Addr;
+typedef struct
+{
+  uint8_t _Addr;
   uint8_t _displayfunction;
   uint8_t _displaycontrol;
   uint8_t _displaymode;
@@ -65,40 +65,38 @@ typedef struct {
   uint8_t _cols;
   uint8_t _rows;
   uint8_t _backlightval;
-}LCD_I2C;
+} LCD_I2C;
 
+// functions
 
-//functions 
-
-void LCDI2CInit(LCD_I2C *display, uint8_t address, uint8_t lcd_cols,uint8_t lcd_rows);
+void LCDI2CInit(LCD_I2C *display, uint8_t address, uint8_t lcd_cols, uint8_t lcd_rows);
 void begin(LCD_I2C *display);
-void configDisplay(LCD_I2C *display  );
-void clear(LCD_I2C *display );
-void home(LCD_I2C *display );
-void noCursor(LCD_I2C *display  );
-void cursor(LCD_I2C *display  );
+void configDisplay(LCD_I2C *display);
+void clear(LCD_I2C *display);
+void home(LCD_I2C *display);
+void noCursor(LCD_I2C *display);
+void cursor(LCD_I2C *display);
 void backlight(LCD_I2C *display);
 void noBacklight(LCD_I2C *display);
-void noBlink(LCD_I2C *display  );
-void blink(LCD_I2C *display  );
-void scrollDisplayRight(LCD_I2C *display  );
-void scrollDisplayLeft(LCD_I2C *display  );
-void noDisplay(LCD_I2C *display  );
-void display(LCD_I2C *display  );
-void leftToRight(LCD_I2C *display  );
-void rightToLeft(LCD_I2C *display  );
-void autoscroll(LCD_I2C *display  );
-void noAutoscroll(LCD_I2C *display  );
-size_t printChar(LCD_I2C *display, const char c  );
-size_t print(LCD_I2C *display, const char* str  );
+void noBlink(LCD_I2C *display);
+void blink(LCD_I2C *display);
+void scrollDisplayRight(LCD_I2C *display);
+void scrollDisplayLeft(LCD_I2C *display);
+void noDisplay(LCD_I2C *display);
+void display(LCD_I2C *display);
+void leftToRight(LCD_I2C *display);
+void rightToLeft(LCD_I2C *display);
+void autoscroll(LCD_I2C *display);
+void noAutoscroll(LCD_I2C *display);
+size_t printChar(LCD_I2C *display, const char c);
+size_t print(LCD_I2C *display, const char *str);
 
-
-void setCursor(LCD_I2C *display,uint8_t col, uint8_t row);
+void setCursor(LCD_I2C *display, uint8_t col, uint8_t row);
 //*********** Low-level LCD functions **************
-void command(LCD_I2C *display, uint8_t value );
-void send(LCD_I2C *display, uint8_t value, uint8_t mode );
+void command(LCD_I2C *display, uint8_t value);
+void send(LCD_I2C *display, uint8_t value, uint8_t mode);
 void write4bits(LCD_I2C *display, uint8_t value);
 void expanderWrite(LCD_I2C *display, uint8_t _data);
-void pulseEnable(LCD_I2C *display, uint8_t _data );
+void pulseEnable(LCD_I2C *display, uint8_t _data);
 
 #endif

@@ -1,25 +1,11 @@
-#ifndef DIO_H
-#define DIO_H
-
+#ifndef GPIO_H
+#define GPIO_H
 #include <stdint.h>
 
-// Enumeration for defining pin direction
-typedef enum {
-   DIO_PIN_INPUT = 0,
-   DIO_PIN_OUTPUT
-} DIO_PinDirection;
-
-// Enumeration for defining port direction
-typedef enum {
-   DIO_PORT_INPUT = 0x00,
-   DIO_PORT_OUTPUT = 0xFF
-} DIO_PortDirection;
-
-// Function prototypes
-void DIO_Init(uint8_t port, uint8_t pin, DIO_PinDirection direction);
-void DIO_WritePin(uint8_t port, uint8_t pin, uint8_t value);
-void DIO_WritePort(uint8_t port, uint8_t value);
-uint8_t DIO_ReadPin(uint8_t port, uint8_t pin);
-uint8_t DIO_ReadPort(uint8_t port);
-
-#endif // DIO_H
+void DIO_Init(uint32_t ui32Port, uint8_t ui8Pins, uint32_t ui32Direction);
+uint32_t GPIO_PortRead(uint32_t ui32Port);
+void DIO_Write(uint32_t ui32Port, uint8_t ui8Pin, uint8_t ui8Value);
+uint8_t GPIO_PinRead(uint32_t ui32Port, uint8_t ui8Pin);
+void GPIO_WritePort(uint32_t ui32Port, uint8_t ui8Value);
+uint8_t GPIO_ReadPort(uint32_t ui32Port);
+#endif

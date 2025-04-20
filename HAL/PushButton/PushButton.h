@@ -1,7 +1,10 @@
 #ifndef PUSHBUTTON_H
 #define PUSHBUTTON_H
 
-void PushButton_Init();
-void PushButton_Action(void);
+#include <stdbool.h>
+#include <stdint.h>
 
-#endif
+void PushButton_Init(void);
+bool PushButton_Read(void);
+
+#endif // PUSHBUTTON_H

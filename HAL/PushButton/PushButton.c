@@ -1,42 +1,25 @@
-#include <stdint.h>
-#include <stdbool.h>
-#include "..\..\MCAL\DIO\DIO.h" 
-#include "driverlib\gpio.h"
-#include "driverlib\sysctl.h"
 #include "PushButton.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "inc/hw_memmap.h"
 
-#define DEBOUNCE_DELAY_MS 50
+#define BUTTON_PORT GPIO_PORTF_BASE
+#define BUTTON_PIN GPIO_PIN_4
 
-void PushButton_Init()
+void PushButton_Init(void)
 {
-    DIO_Init('F', GPIO_PIN_4, GPIO_DIR_MODE_IN);
+    // Enable GPIOF peripheral
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF))
+        ;
+
+    // Configure PF4 as input with pull-up
+    GPIOPinTypeGPIOInput(BUTTON_PORT, BUTTON_PIN);
+    GPIOPadConfigSet(BUTTON_PORT, BUTTON_PIN, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
 }
 
-void PushButton_Action(void)
+bool PushButton_Read(void)
 {
-    static bool lastState = false; // Stores the last stable state of the rocker switch
-    bool currentState = DIO_ReadPin('F', GPIO_PIN_4); // Read the current state of the rocker switch
-
-    if (currentState != lastState) // If the state has changed
-    {
-//        SysCtlDelay(50000); // Debounce delay (adjust this as per your system clock speed)
-        currentState = DIO_ReadPin('F', GPIO_PIN_4); // Read the state again to confirm it's stable
-
-        if (currentState != lastState) // Confirm the state change
-        {
-            lastState = currentState; // Update the last state
-
-            if (!currentState) // If the rocker switch is pressed
-            {
-                if (DIO_ReadPin('F', GPIO_PIN_1)) // If the LED is ON
-                {
-                    DIO_WritePin('F', GPIO_PIN_1, 0); // Turn OFF the LED
-                }
-                else // If the LED is OFF
-                {
-                    DIO_WritePin('F', GPIO_PIN_1, 1); // Turn ON the LED
-                }
-            }
-        }
-    }
+    // Return true if pressed (logic low)
+    return (GPIOPinRead(BUTTON_PORT, BUTTON_PIN) == 0);
 }

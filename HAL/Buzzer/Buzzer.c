@@ -1,37 +1,44 @@
 #include <stdbool.h>
 #include <stdint.h>
-#include "driverlib\gpio.h"
-#include "driverlib\sysctl.h"
-#include "driverlib\debug.h"
-#include "inc\hw_memmap.h"
-#include "..\MCAL\DIO\DIO.h"
-#include "..\MCAL\Timer0\timer0.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "inc/hw_memmap.h"
+#include "Buzzer.h"
+
+#define BUZZER_PORT GPIO_PORTF_BASE
+#define BUZZER_PIN GPIO_PIN_2
 
 void Buzzer_Init()
 {
-  DIO_Init('F', GPIO_PIN_3, GPIO_DIR_MODE_OUT);
+    // Enable the peripheral for GPIO Port F
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOF))
+        ;
+
+    // Configure Pin 2 on Port F as output
+    GPIOPinTypeGPIOOutput(BUZZER_PORT, BUZZER_PIN);
 }
+
 void Buzzer_On()
 {
-    DIO_WritePin('F', GPIO_PIN_3, 1);
+    GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, BUZZER_PIN); // Set PF2 high
 }
 
 void Buzzer_Off()
 {
-    DIO_WritePin('F', GPIO_PIN_3, 0);
+    GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF2 low
 }
 
+// void Buzzer_Buzz(uint32_t frequency) {
+////    uint32_t periodMs = 1000 / frequency;
+////    uint32_t halfPeriodMs = periodMs / 2;
 
-void Buzzer_Buzz(uint32_t frequency) {
-    uint32_t periodMs = 1000 / frequency; 
-    uint32_t halfPeriodMs = periodMs / 2; 
+////    // uint32_t cycles = durationMs / periodMs; //gam3t eno runs 3alatol mesh b duration mo3yna
 
-    // uint32_t cycles = durationMs / periodMs; //gam3t eno runs 3alatol mesh b duration mo3yna
-
-    while (1){
-        Buzzer_On(); 
-        timer0B_delayMs(halfPeriodMs);
-        Buzzer_Off(); 
-        timer0B_delayMs(halfPeriodMs); 
-    }
-}
+////    while (1){
+////        Buzzer_On();
+////        timer0B_delayMs(halfPeriodMs);
+////        Buzzer_Off();
+////        timer0B_delayMs(halfPeriodMs);
+////    }
+//}

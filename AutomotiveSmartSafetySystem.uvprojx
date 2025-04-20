@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\DIO;.\MCAL\I2C;.\MCAL\UART0;.\MCAL\UART5;.\HAL\LCD;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers</IncludePath>
+              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\DIO;.\MCAL\Timer0;.\MCAL\Timer1;.\MCAL\UART0;.\MCAL\UART5;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -393,36 +393,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>DIO</GroupName>
-          <Files>
-            <File>
-              <FileName>DIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\DIO\DIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>DIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\MCAL\DIO\DIO.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>I2C</GroupName>
-          <Files>
-            <File>
-              <FileName>I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\I2C\I2C.c</FilePath>
-            </File>
-            <File>
-              <FileName>I2C.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\MCAL\I2C\I2C.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>ADC0</GroupName>
           <Files>
             <File>
@@ -449,6 +419,51 @@
               <FileName>ADC1.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\MCAL\ADC1\ADC1.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>I2C</GroupName>
+          <Files>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\I2C\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\I2C\I2C.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Timer0</GroupName>
+          <Files>
+            <File>
+              <FileName>timer0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\Timer0\timer0.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer0.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\Timer0\timer0.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Timer1</GroupName>
+          <Files>
+            <File>
+              <FileName>Timer1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\MCAL\Timer1\Timer1.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer1.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\MCAL\Timer1\Timer1.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -588,17 +603,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Tasks</GroupName>
+          <GroupName>PushButton</GroupName>
           <Files>
             <File>
-              <FileName>Tasks.c</FileName>
+              <FileName>PushButton.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Tasks\Tasks.c</FilePath>
+              <FilePath>.\HAL\PushButton\PushButton.c</FilePath>
             </File>
             <File>
-              <FileName>Tasks.h</FileName>
+              <FileName>PushButton.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Tasks\Tasks.h</FilePath>
+              <FilePath>.\HAL\PushButton\PushButton.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -618,42 +633,42 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Tasks</GroupName>
+          <Files>
+            <File>
+              <FileName>Tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tasks\Tasks.c</FilePath>
+            </File>
+            <File>
+              <FileName>Tasks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tasks\Tasks.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Drivers</GroupName>
           <Files>
             <File>
               <FileName>driverlib.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\rvmdk\driverlib.lib</FilePath>
+              <FilePath>.\Drivers\driverlib\rvmdk\driverlib.lib</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Timer0</GroupName>
+          <GroupName>DIO</GroupName>
           <Files>
             <File>
-              <FileName>timer0.c</FileName>
+              <FileName>DIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\MCAL\Timer0\timer0.c</FilePath>
+              <FilePath>.\MCAL\DIO\DIO.c</FilePath>
             </File>
             <File>
-              <FileName>timer0.h</FileName>
+              <FileName>DIO.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\MCAL\Timer0\timer0.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>PushButton</GroupName>
-          <Files>
-            <File>
-              <FileName>PushButton.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\HAL\PushButton\PushButton.c</FilePath>
-            </File>
-            <File>
-              <FileName>PushButton.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\HAL\PushButton\PushButton.h</FilePath>
+              <FilePath>.\MCAL\DIO\DIO.h</FilePath>
             </File>
           </Files>
         </Group>
