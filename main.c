@@ -31,7 +31,7 @@
 /* The interrupt number to use for the software interrupt generation.  This
 could be any unused number.  In this case the first chip level (non system)
 interrupt is used, which happens to be the watchdog on the LPC1768. */
-#define mainSW_INTERRUPT_ID		( ( IRQn_Type ) 30 )
+#define mainSW_INTERRUPT_ID		( ( IRQn_Type ) 5 )
 
 /* Macro to force an interrupt. */
 #define mainTRIGGER_INTERRUPT()	NVIC_SetPendingIRQ( mainSW_INTERRUPT_ID )

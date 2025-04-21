@@ -79,12 +79,12 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
 
                 ; External Interrupts
 
-                DCD     vSoftwareInterruptHandler                      ;   0: GPIO Port A
+                DCD     GPIOA_Handler             ;   0: GPIO Port A
                 DCD     GPIOB_Handler             ;   1: GPIO Port B
                 DCD     GPIOC_Handler             ;   2: GPIO Port C
                 DCD     GPIOD_Handler             ;   3: GPIO Port D
                 DCD     GPIOE_Handler             ;   4: GPIO Port E
-                DCD     UART0_Handler             ;   5: UART0 Rx and Tx
+                DCD     vSoftwareInterruptHandler             ;   5: UART0 Rx and Tx
                 DCD     UART1_Handler             ;   6: UART1 Rx and Tx
                 DCD     SSI0_Handler              ;   7: SSI0 Rx and Tx
                 DCD     I2C0_Handler              ;   8: I2C0 Master and Slave
@@ -109,7 +109,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     COMP2_Handler             ;  27: Analog Comparator 2
                 DCD     SYSCTL_Handler            ;  28: System Control (PLL, OSC, BO)
                 DCD     FLASH_Handler             ;  29: FLASH Control
-                DCD     vSoftwareInterruptHandler          ;  30: GPIO Port F
+                DCD     GPIOF_Handler             ;  30: GPIO Port F
                 DCD     GPIOG_Handler             ;  31: GPIO Port G
                 DCD     GPIOH_Handler             ;  32: GPIO Port H
                 DCD     UART2_Handler             ;  33: UART2 Rx and Tx
@@ -315,12 +315,11 @@ GPIOE_Handler\
                 B       .
                 ENDP
 
-UART0_Handler\
+vSoftwareInterruptHandler\
                 PROC
-                EXPORT  UART0_Handler [WEAK]
+                EXPORT  vSoftwareInterruptHandler [WEAK]
                 B       .
                 ENDP
-
 UART1_Handler\
                 PROC
                 EXPORT  UART1_Handler [WEAK]
@@ -465,9 +464,9 @@ FLASH_Handler\
                 B       .
                 ENDP
 
-vSoftwareInterruptHandler\
+GPIOF_Handler\
                 PROC
-                EXPORT  vSoftwareInterruptHandler [WEAK]
+                EXPORT  GPIOF_Handler [WEAK]
                 B       .
                 ENDP
 
