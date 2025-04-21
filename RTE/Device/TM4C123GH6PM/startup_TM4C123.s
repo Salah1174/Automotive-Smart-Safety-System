@@ -79,7 +79,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
 
                 ; External Interrupts
 
-                DCD     GPIOA_Handler             ;   0: GPIO Port A
+                DCD     vSoftwareInterruptHandler                      ;   0: GPIO Port A
                 DCD     GPIOB_Handler             ;   1: GPIO Port B
                 DCD     GPIOC_Handler             ;   2: GPIO Port C
                 DCD     GPIOD_Handler             ;   3: GPIO Port D
@@ -109,7 +109,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     COMP2_Handler             ;  27: Analog Comparator 2
                 DCD     SYSCTL_Handler            ;  28: System Control (PLL, OSC, BO)
                 DCD     FLASH_Handler             ;  29: FLASH Control
-                DCD     GPIOF_Handler             ;  30: GPIO Port F
+                DCD     vSoftwareInterruptHandler          ;  30: GPIO Port F
                 DCD     GPIOG_Handler             ;  31: GPIO Port G
                 DCD     GPIOH_Handler             ;  32: GPIO Port H
                 DCD     UART2_Handler             ;  33: UART2 Rx and Tx
@@ -465,9 +465,9 @@ FLASH_Handler\
                 B       .
                 ENDP
 
-GPIOF_Handler\
+vSoftwareInterruptHandler\
                 PROC
-                EXPORT  GPIOF_Handler [WEAK]
+                EXPORT  vSoftwareInterruptHandler [WEAK]
                 B       .
                 ENDP
 
