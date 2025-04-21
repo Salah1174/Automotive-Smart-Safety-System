@@ -39,11 +39,10 @@ void D_Display(LCD_I2C *lcdDisplay, uint32_t speedValue, uint8_t doorStatus,uint
 	home(lcdDisplay);
 
 	// Print a message on the LCD
-	sprintf(speedBuffer, "Speed: %d", speedValue);
+	sprintf(speedBuffer, "S: %d km/h", speedValue);
 	print(lcdDisplay, speedBuffer);
-
-	setCursor(lcdDisplay, 12, 0);
-	print(lcdDisplay, "km/h");
+	//setCursor(lcdDisplay, 12, 0);
+	//print(lcdDisplay, "km/h");
 
 	// Move the cursor to the second line and print another message
 	// command(lcdDisplay, LCD_SETDDRAMADDR|LCD_SETCGRAMADDR); // Move cursor to the second line
@@ -52,20 +51,22 @@ void D_Display(LCD_I2C *lcdDisplay, uint32_t speedValue, uint8_t doorStatus,uint
 	print(lcdDisplay, doorBuffer);
 }
 
-void R_Display(LCD_I2C *lcdDisplay, uint32_t distanceValue,uint8_t carStarted)
+void R_Display(LCD_I2C *lcdDisplay, uint32_t distanceValue,uint32_t speed,uint8_t doorStatus,uint8_t lockStatus)
 {
+	char speedBuffer[50];
 	char buffer[50];
 	clear(lcdDisplay);
 	home(lcdDisplay);
 	// Print a message on the LCD
-	print(lcdDisplay, "Speed:");
-
-	setCursor(lcdDisplay, 12, 0);
-	print(lcdDisplay, "km/h");
+	//print(lcdDisplay, "Speed:");
+	sprintf(speedBuffer, "%d km/h %d m",speed,distanceValue);
+	print(lcdDisplay, speedBuffer);
+	//setCursor(lcdDisplay, 12, 0);
+	//print(lcdDisplay, "km/h");
 
 	// Move the cursor to the second line and print another message
 	setCursor(lcdDisplay, 0, 1); // Move cursor to the second line
-	sprintf(buffer, "%d m %d", distanceValue,carStarted);
+	sprintf(buffer, "Door: %d Lock: %d ", doorStatus,lockStatus);
 	print(lcdDisplay, buffer);
 
 //	setCursor(lcdDisplay, 15, 1);

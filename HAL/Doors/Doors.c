@@ -35,7 +35,7 @@ void DOOR_Init(void)
 
 bool DOOR_Status(void)
 {
-    return !GPIOPinRead(LIMITSWITCH_PORT, LIMITSWITCH_PIN); // Return true if pressed
+    return GPIOPinRead(LIMITSWITCH_PORT, LIMITSWITCH_PIN); // Return true if pressed
 }
 
 // Interrupt Service Routine for Port C

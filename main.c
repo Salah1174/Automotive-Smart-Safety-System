@@ -3,8 +3,6 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "inc/hw_memmap.h"
-
-
 #include "LCD.h"
 #include "PushButton.h"
 #include "Potentiometer.h"
@@ -12,19 +10,11 @@
 #include "Doors.h"
 #include "IginitionSwitch.h"
 #include "ultrasonic.h"
-
 #include "APP/Display/display.h"
-
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
 #include "semphr.h" 
-
-
-#include "core_cm4.h"
-
-
-
 #define LED_PORT GPIO_PORTF_BASE
 #define LED_PIN GPIO_PIN_1
 
@@ -58,6 +48,7 @@ void vSoftwareInterruptHandler( void );
 
 TaskHandle_t 	xDisplay= NULL;	
 TaskHandle_t xAlert = NULL; 
+TaskHandle_t xIgnition =NULL;
 xSemaphoreHandle xBinarySemaphore; 
 
 
@@ -119,8 +110,16 @@ void AlertLCD(void *pvParameter){
 		while(1){
 			xSemaphoreTake(xBinarySemaphore, 100000); 
 //		//vPrintString("hEllo");
+			uint32_t speed = potentiometer_ReadValue();
+			bool door = DOOR_Status();
 			Alert_Display(&lcdDisplay);
-			delay_ms(2500);
+			while (speed >150 && door == true ){
+				speed = potentiometer_ReadValue();
+				door = DOOR_Status();
+				
+				delay_ms(500);
+			}
+			
 			//vTaskDelay( 250 / portTICK_RATE_MS );
 		}
 }
@@ -130,29 +129,89 @@ void AlertLCD(void *pvParameter){
 //}//
 
 void GearLCD(void *pvParameter){
+	uint32_t speed;
+	bool door;
+	bool lock;
+	bool ignition;
+	uint32_t distance;
 	
 	while(1){
 		bool currentPress = PushButton_Read();
+		speed = potentiometer_ReadValue();
+		door = DOOR_Status();
+		lock = Lock_Read();
+		distance = ultrasonic_ReadValue();
+		
+		
+		if(speed >150 && door == true ){
+					mainTRIGGER_INTERRUPT();
+				}
+		
 		if (currentPress ==false){
-			D_Display(&lcdDisplay,100,1,1);
+			D_Display(&lcdDisplay,speed,door,lock);
 			delay_ms(2500);
 		}
 		
 		if (currentPress ==true){
-			R_Display(&lcdDisplay,100,1);	
+			R_Display(&lcdDisplay,distance,speed,door,lock);	
 			delay_ms(2500);
 		}
 		vTaskDelay( 250 / portTICK_RATE_MS );
-		mainTRIGGER_INTERRUPT();
+				
+//		mainTRIGGER_INTERRUPT();
+		
+		
 	}
 }
+
+void ignition_task (void * pvParameters)
+	{
+	bool currentPressed = PushButton_Read();
+	bool lastPressed ; 
+	bool state = 0;
+	while(1)
+	{
+	currentPressed = Lock_Read();
+	 if (currentPressed)
+    {		
+//			if (PushButton_Read())
+//      {
+       state ^= 1;
+//      }  						
+    }
+		carOff_Display(&lcdDisplay);
+//		D_Display(&lcdDisplay,150,currentPressed,state);
+		delay_ms(1500);
+		if(state)
+		{
+								carOn_Display(&lcdDisplay);
+								delay_ms(2000);
+								vTaskSuspend(xIgnition);
+		}
+
+		if(!state && currentPressed)
+		{
+           vTaskDelete(&xDisplay);
+					 vTaskDelete(&xAlert);
+            vTaskSuspend(NULL);
+
+		}
+//				if (state)
+//        {
+//        }
+//        else
+//        {
+//        }
+	}
+}
+
 
 
 int main(void)
 {
 	
 //		xSemaphoreTake(xBinarySemaphore,0);
-		__ASM(" CPSIE I ");
+
 		prvSetupSoftwareInterrupt();
     SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_PLL |SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
     
@@ -170,7 +229,7 @@ int main(void)
 		IgnitionSwitch_Init();
 	
 		vSemaphoreCreateBinary(xBinarySemaphore);
-    //Alert_Display(&lcdDisplay);
+
 		
 		
 		
@@ -180,8 +239,10 @@ int main(void)
     bool lastPressed = false;
     uint32_t speed = 0;
     uint32_t distance = 0;
-		xTaskCreate(GearLCD, "Gear LCD"	, 150, NULL, 2, &xDisplay);
-		xTaskCreate(AlertLCD, "Alert LCD", 150, NULL, 3, &xAlert); 
+
+		xTaskCreate(ignition_task,"Ignition" ,244,NULL , 6,&xIgnition);
+		xTaskCreate(GearLCD, "Gear LCD"	, 244 , NULL, 2, &xDisplay);
+		xTaskCreate(AlertLCD, "Alert LCD", 150, NULL, 3, &xAlert);
 		//xTaskCreate(AlertozLCD, "Alertoz LCD", 150, NULL, 2, NULL); 
 		vTaskStartScheduler();
 		
@@ -191,38 +252,21 @@ int main(void)
     while (1)
     {
 		
-//        bool currentPressed = PushButton_Read();
-//        uint8_t state = GPIOPinRead(LED_PORT, LED_PIN);
-//        speed = potentiometer_ReadValue();
-//        distance = ultrasonic_ReadValue();
-//				doorStatus = DOOR_Status();
-//				doorLocked = Lock_Read(); 
-//				carStatus = IgnitionSwitch_Read();
-//			
-//        if (currentPressed && !lastPressed)
-//        {
-//            // Debounce delay
-//            SysCtlDelay(SysCtlClockGet() / 100); // ~10 ms
 
-//            // Confirm again
-//            if (PushButton_Read())
-//            {
-
-//                // Toggle LED
-//                state = GPIOPinRead(LED_PORT, LED_PIN);
-//                GPIOPinWrite(LED_PORT, LED_PIN, state ^ LED_PIN);
-//            }
-//        }
-//        if (state)
-//        {
-//            D_Display(&lcdDisplay, speed, doorStatus,doorLocked);
-//            delay_ms(1000);
-//        }
-//        else
-//        {
-//            R_Display(&lcdDisplay, distance,carStatus);
-//            delay_ms(1000);
-//        }
-//        lastPressed = currentPressed;
     }
+}
+
+
+void vApplicationIdleHook( void )
+{
+bool on;
+
+	while(1){
+		on= IgnitionSwitch_Read();
+		if(on){
+			vTaskResume(xIgnition);
+
+		  
+		}
+	}
 }
