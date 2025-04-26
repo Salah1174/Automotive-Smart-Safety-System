@@ -84,8 +84,8 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     GPIOC_Handler             ;   2: GPIO Port C
                 DCD     GPIOD_Handler             ;   3: GPIO Port D
                 DCD     GPIOE_Handler             ;   4: GPIO Port E
-                DCD     vSoftwareInterruptHandler             ;   5: UART0 Rx and Tx
-                DCD     UART1_Handler             ;   6: UART1 Rx and Tx
+                DCD     vSoftwareInterruptHandler_1             ;   5: UART0 Rx and Tx
+                DCD     vSoftwareInterruptHandler_2             ;   6: UART1 Rx and Tx
                 DCD     SSI0_Handler              ;   7: SSI0 Rx and Tx
                 DCD     I2C0_Handler              ;   8: I2C0 Master and Slave
                 DCD     PMW0_FAULT_Handler        ;   9: PWM Fault
@@ -315,14 +315,14 @@ GPIOE_Handler\
                 B       .
                 ENDP
 
-vSoftwareInterruptHandler\
+vSoftwareInterruptHandler_1\
                 PROC
-                EXPORT  vSoftwareInterruptHandler [WEAK]
+                EXPORT  vSoftwareInterruptHandler_1 [WEAK]
                 B       .
                 ENDP
-UART1_Handler\
+vSoftwareInterruptHandler_2\
                 PROC
-                EXPORT  UART1_Handler [WEAK]
+                EXPORT  vSoftwareInterruptHandler_2 [WEAK]
                 B       .
                 ENDP
 

@@ -1,8 +1,9 @@
 #include "TM4C123GH6PM.h"
 #include "inc/tm4c123gh6pm.h"
 #include <stdint.h>
-
 #include "driverlib/timer.h"
+#define SystemCoreClock 16000000U
+#include "inc/hw_memmap.h"
 // used in lcd operations taht need delay
 void Timer0A_Init(void)
 {

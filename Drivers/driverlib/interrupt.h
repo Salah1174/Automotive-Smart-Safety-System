@@ -57,6 +57,8 @@ extern "C"
 // of priority supported by the hardware.
 //
 //*****************************************************************************
+#include <stdint.h>
+#include <stdbool.h>
 #define INT_PRIORITY_MASK       ((0xFF << (8 - NUM_PRIORITY_BITS)) & 0xFF)
 
 //*****************************************************************************

@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\Timer0;.\MCAL\Timer1;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers</IncludePath>
+              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\Timer0;.\MCAL\Timer1;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers;.\MCAL\GPIO;..\Automotive-Smart-Safety-System;.\Drivers\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -609,6 +609,36 @@
               <FileName>driverlib.lib</FileName>
               <FileType>4</FileType>
               <FilePath>.\Drivers\driverlib\rvmdk\driverlib.lib</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LED</GroupName>
+          <Files>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LED.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Port_Config</GroupName>
+          <Files>
+            <File>
+              <FileName>Port_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Port_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>Port_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Port_Config.h</FilePath>
             </File>
           </Files>
         </Group>

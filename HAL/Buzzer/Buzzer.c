@@ -5,9 +5,18 @@
 #include "inc/hw_memmap.h"
 #include "Buzzer.h"
 
-#define BUZZER_PORT GPIO_PORTF_BASE
-#define BUZZER_PIN GPIO_PIN_2
-
+#define BUZZER_PORT GPIO_PORTE_BASE
+#define BUZZER_PIN GPIO_PIN_3
+void delay_(uint32_t ms)
+{
+    volatile uint32_t i;
+    while (ms--)
+    {
+        for (i = 0; i < 4000; i++)
+        {
+        }
+    }
+}
 void Buzzer_Init()
 {
     // Enable the peripheral for GPIO Port F
@@ -29,16 +38,16 @@ void Buzzer_Off()
     GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF2 low
 }
 
-// void Buzzer_Buzz(uint32_t frequency) {
-////    uint32_t periodMs = 1000 / frequency;
-////    uint32_t halfPeriodMs = periodMs / 2;
+ void Buzzer_Buzz(uint32_t frequency) {
+    uint32_t periodMs = 1000 / frequency;
+    uint32_t halfPeriodMs = periodMs / 2;
 
-////    // uint32_t cycles = durationMs / periodMs; //gam3t eno runs 3alatol mesh b duration mo3yna
+    // uint32_t cycles = durationMs / periodMs; //gam3t eno runs 3alatol mesh b duration mo3yna
 
-////    while (1){
-////        Buzzer_On();
-////        timer0B_delayMs(halfPeriodMs);
-////        Buzzer_Off();
-////        timer0B_delayMs(halfPeriodMs);
-////    }
-//}
+    while (1){
+        Buzzer_On();
+        delay_(frequency);
+        Buzzer_Off();
+        delay_(frequency);
+    }
+}
