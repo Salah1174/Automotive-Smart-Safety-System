@@ -91,16 +91,6 @@ int main(void)
 	prvSetupSoftwareInterrupt();
 	SysCtlClockSet(SYSCTL_SYSDIV_4 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
 
-	//	SysCtlPeripheralEnable(LEDS_PORT_SYSCTL_2);
-	//	while (!SysCtlPeripheralReady(LEDS_PORT_SYSCTL_2))
-	//		;
-	//	GPIOPinTypeGPIOOutput(LEDS_PORT_2, YELLOW_LED_PIN | GREEN_LED_PIN);
-
-	//	SysCtlPeripheralEnable(LEDS_PORT_SYSCTL);
-	//	while (!SysCtlPeripheralReady(LEDS_PORT_SYSCTL))
-	//		;
-	//	GPIOPinTypeGPIOOutput(LEDS_PORT, RED_LED_PIN);
-
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
 	while (!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOB))
 		;
