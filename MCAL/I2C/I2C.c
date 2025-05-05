@@ -32,7 +32,7 @@ void I2C_Init(void)
    * If false the data rate is set to 100kbps and if true the data rate will
    * be set to 400kbps.  For this example we will use a data rate of 100kbps.
    */
-  I2CMasterInitExpClk(I2C0_BASE, SysCtlClockGet(), true);
+  I2CMasterInitExpClk(I2C0_BASE, SysCtlClockGet(), false);
 
   // clear I2C FIFOs
   HWREG(I2C0_BASE + I2C_O_FIFOCTL) = 80008000;

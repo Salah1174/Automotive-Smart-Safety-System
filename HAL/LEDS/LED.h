@@ -1,9 +1,9 @@
 #ifndef LED_H
 #define LED_H
 
-void LEDs_Init(void) ;
+void LEDs_Init(void);
 
-void RED(void) ;
+void RED(void);
 
 void GREEN(void);
 

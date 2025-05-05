@@ -6,7 +6,7 @@
 // Initialize GPIO & Timer for ultrasonic
 void Ultrasonic_init(void);
 
-// Send a 10 µs trigger pulse
+// Send a 10ï¿½ï¿½s trigger pulse
 void Ultrasonic_Trigger(void);
 
 // Measure and return distance in centimeters

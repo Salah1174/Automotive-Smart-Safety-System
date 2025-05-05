@@ -1,546 +1,552 @@
 Dependencies for Project 'AutomotiveSmartSafetySystem', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
-F (.\main.c)(0x680C1D7C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
+F (.\main.c)(0x68181BC1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-I (HAL\LCD\LCD.h)(0x6807EDC8)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (HAL\LCD\LCD.h)(0x681815B3)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (Tasks\..\MCAL\Timer0\timer0.h)(0x6807EDC8)
-I (HAL\PushButton\PushButton.h)(0x6807EDC8)
-I (HAL\Potentiometer\Potentiometer.h)(0x6807EDC8)
-I (HAL\Lock\Lock.h)(0x6807EDC8)
-I (HAL\Doors\Doors.h)(0x6807EDC8)
-I (HAL\Ultrasonic\ultrasonic.h)(0x680A8DA3)
-I (..\Automotive-Smart-Safety-System\APP\Display\display.h)(0x6807EE42)
-I (Tasks\..\HAL\LCD\LCD.h)(0x6807EDC8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (Tasks\..\MCAL\Timer0\timer0.h)(0x680553BC)
+I (HAL\PushButton\PushButton.h)(0x68055343)
+I (HAL\Potentiometer\Potentiometer.h)(0x681815BF)
+I (HAL\Lock\Lock.h)(0x681815BC)
+I (HAL\Doors\Doors.h)(0x6805537A)
+I (HAL\Ultrasonic\ultrasonic.h)(0x681815E2)
+I (..\Automotive-Smart-Safety-System\APP\Display\display.h)(0x68181642)
+I (Tasks\..\HAL\LCD\LCD.h)(0x681815B3)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\semphr.h)(0x6628B5E8)
-I (HAL\IginitionSwitch\IginitionSwitch.h)(0x6807EDC8)
-F (.\MCAL\ADC1\ADC1.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/adc1.o -MD)
-I (MCAL\ADC1\ADC1.h)(0x6807EDC8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\semphr.h)(0x6628B5E8)
+I (HAL\IginitionSwitch\IginitionSwitch.h)(0x681815AD)
+I (HAL\Buzzer\Buzzer.h)(0x6818159D)
+I (HAL\LEDS\LED.h)(0x681815B7)
+F (.\MCAL\ADC1\ADC1.c)(0x681815EF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/adc1.o -MD)
+I (MCAL\ADC1\ADC1.h)(0x681815F0)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-F (.\MCAL\ADC1\ADC1.h)(0x6807EDC8)()
-F (.\MCAL\I2C\I2C.c)(0x680A433A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/i2c.o -MD)
-I (Drivers\inc\TM4C123GH6PM.h)(0x6807EDC8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+F (.\MCAL\ADC1\ADC1.h)(0x681815F0)()
+F (.\MCAL\I2C\I2C.c)(0x681815FE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/i2c.o -MD)
+I (Drivers\inc\TM4C123GH6PM.h)(0x6800C71B)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (MCAL\I2C\I2C.h)(0x6807EDC8)
+I (MCAL\I2C\I2C.h)(0x68181600)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (Drivers\driverlib\i2c.h)(0x6807EDC8)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\driverlib\pin_map.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-I (Drivers\inc\hw_types.h)(0x6807EDC8)
-I (Drivers\inc\hw_i2c.h)(0x6807EDC8)
-F (.\MCAL\I2C\I2C.h)(0x6807EDC8)()
-F (.\MCAL\Timer0\timer0.c)(0x680BA2DE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timer0.o -MD)
-I (Drivers\inc\TM4C123GH6PM.h)(0x6807EDC8)
+I (Drivers\driverlib\i2c.h)(0x6800C71B)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\driverlib\pin_map.h)(0x6800C71B)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (Drivers\inc\hw_types.h)(0x6800C71B)
+I (Drivers\inc\hw_i2c.h)(0x6800C71B)
+F (.\MCAL\I2C\I2C.h)(0x68181600)()
+F (.\MCAL\Timer0\timer0.c)(0x680CDC95)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timer0.o -MD)
+I (Drivers\inc\TM4C123GH6PM.h)(0x6800C71B)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (Drivers\driverlib\timer.h)(0x6807EDC8)
+I (Drivers\driverlib\timer.h)(0x6800C71B)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-F (.\MCAL\Timer0\timer0.h)(0x6807EDC8)()
-F (.\MCAL\Timer1\Timer1.c)(0x68096C25)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timer1.o -MD)
-I (MCAL\Timer1\Timer1.h)(0x6807EDC8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+F (.\MCAL\Timer0\timer0.h)(0x680553BC)()
+F (.\MCAL\Timer1\Timer1.c)(0x68181609)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timer1.o -MD)
+I (MCAL\Timer1\Timer1.h)(0x680553C1)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-F (.\MCAL\Timer1\Timer1.h)(0x6807EDC8)()
-F (.\HAL\Buzzer\Buzzer.c)(0x680AE23B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/buzzer.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+F (.\MCAL\Timer1\Timer1.h)(0x680553C1)()
+F (.\HAL\Buzzer\Buzzer.c)(0x6818159B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/buzzer.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-I (HAL\Buzzer\Buzzer.h)(0x680AD85C)
-F (.\HAL\Buzzer\Buzzer.h)(0x680AD85C)()
-F (.\HAL\Doors\Doors.c)(0x6807EE42)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/doors.o -MD)
-I (HAL\Doors\Doors.h)(0x6807EDC8)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (HAL\Buzzer\Buzzer.h)(0x6818159D)
+F (.\HAL\Buzzer\Buzzer.h)(0x6818159D)()
+F (.\HAL\Doors\Doors.c)(0x681815A5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/doors.o -MD)
+I (HAL\Doors\Doors.h)(0x6805537A)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\driverlib\interrupt.h)(0x680BA2AD)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-I (Drivers\inc\hw_ints.h)(0x6807EDC8)
-F (.\HAL\Doors\Doors.h)(0x6807EDC8)()
-F (.\HAL\IginitionSwitch\IginitionSwitch.c)(0x680C196D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/iginitionswitch.o -MD)
-I (HAL\IginitionSwitch\IginitionSwitch.h)(0x6807EDC8)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\driverlib\interrupt.h)(0x680CDC95)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (Drivers\inc\hw_ints.h)(0x6800C71B)
+F (.\HAL\Doors\Doors.h)(0x6805537A)()
+F (.\HAL\IginitionSwitch\IginitionSwitch.c)(0x681815AB)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/iginitionswitch.o -MD)
+I (HAL\IginitionSwitch\IginitionSwitch.h)(0x681815AD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (Drivers\driverlib\interrupt.h)(0x680CDC95)
+I (Drivers\inc\hw_ints.h)(0x6800C71B)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
-F (.\HAL\IginitionSwitch\IginitionSwitch.h)(0x6807EDC8)()
-F (.\HAL\LCD\LCD.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lcd.o -MD)
-I (HAL\LCD\LCD.h)(0x6807EDC8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (Tasks\..\MCAL\Timer0\timer0.h)(0x6807EDC8)
-I (Tasks\..\MCAL\I2C\I2C.h)(0x6807EDC8)
-I (Drivers\inc\TM4C123GH6PM.h)(0x6807EDC8)
-I (Drivers\driverlib\i2c.h)(0x6807EDC8)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\driverlib\pin_map.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-I (Drivers\inc\hw_types.h)(0x6807EDC8)
-I (Drivers\inc\hw_i2c.h)(0x6807EDC8)
-F (.\HAL\LCD\LCD.h)(0x6807EDC8)()
-F (.\HAL\Lock\Lock.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lock.o -MD)
-I (HAL\PushButton\PushButton.h)(0x6807EDC8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-F (.\HAL\Lock\Lock.h)(0x6807EDC8)()
-F (.\HAL\Potentiometer\Potentiometer.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/potentiometer.o -MD)
-I (HAL\Potentiometer\Potentiometer.h)(0x6807EDC8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (MCAL\ADC1\ADC1.h)(0x6807EDC8)
-F (.\HAL\Potentiometer\Potentiometer.h)(0x6807EDC8)()
-F (.\HAL\Ultrasonic\ultrasonic.c)(0x680A8D95)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/ultrasonic.o -MD)
-I (HAL\Ultrasonic\ultrasonic.h)(0x680A8DA3)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (MCAL\Timer1\Timer1.h)(0x6807EDC8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-F (.\HAL\Ultrasonic\ultrasonic.h)(0x680A8DA3)()
-F (.\HAL\PushButton\PushButton.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/pushbutton.o -MD)
-I (HAL\PushButton\PushButton.h)(0x6807EDC8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-I (Drivers\driverlib\gpio.h)(0x6807EDC8)
-I (Drivers\inc\hw_memmap.h)(0x6807EDC8)
-F (.\HAL\PushButton\PushButton.h)(0x6807EDC8)()
-F (.\APP\Display\display.c)(0x6807EE42)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/display.o -MD)
-I (APP\Display\display.h)(0x6807EE42)
-I (Tasks\..\HAL\LCD\LCD.h)(0x6807EDC8)
+F (.\HAL\IginitionSwitch\IginitionSwitch.h)(0x681815AD)()
+F (.\HAL\LCD\LCD.c)(0x681815B2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lcd.o -MD)
+I (HAL\LCD\LCD.h)(0x681815B3)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (Tasks\..\MCAL\Timer0\timer0.h)(0x6807EDC8)
-I (Drivers\inc\tm4c123gh6pm.h)(0x6807EDC8)
-I (Drivers\driverlib\sysctl.h)(0x6807EDC8)
-F (.\APP\Display\display.h)(0x6807EE42)()
-F (.\Tasks\Tasks.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/tasks.o -MD)
-I (Tasks\Tasks.h)(0x6807EDC8)
-F (.\Tasks\Tasks.h)(0x6807EDC8)()
-F (.\Drivers\driverlib\rvmdk\driverlib.lib)(0x6807EDC8)()
-F (.\LED.c)(0x680AF5B9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/led.o -MD)
+I (Tasks\..\MCAL\Timer0\timer0.h)(0x680553BC)
+I (Tasks\..\MCAL\I2C\I2C.h)(0x68181600)
+I (Drivers\inc\TM4C123GH6PM.h)(0x6800C71B)
+I (Drivers\driverlib\i2c.h)(0x6800C71B)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\driverlib\pin_map.h)(0x6800C71B)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (Drivers\inc\hw_types.h)(0x6800C71B)
+I (Drivers\inc\hw_i2c.h)(0x6800C71B)
+F (.\HAL\LCD\LCD.h)(0x681815B3)()
+F (.\HAL\Lock\Lock.c)(0x681815BA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/lock.o -MD)
+I (HAL\PushButton\PushButton.h)(0x68055343)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\driverlib\interrupt.h)(0x680CDC95)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+I (Drivers\inc\hw_ints.h)(0x6800C71B)
+F (.\HAL\Lock\Lock.h)(0x681815BC)()
+F (.\HAL\Potentiometer\Potentiometer.c)(0x681815BE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/potentiometer.o -MD)
+I (HAL\Potentiometer\Potentiometer.h)(0x681815BF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (MCAL\ADC1\ADC1.h)(0x681815F0)
+F (.\HAL\Potentiometer\Potentiometer.h)(0x681815BF)()
+F (.\HAL\Ultrasonic\ultrasonic.c)(0x681815E0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/ultrasonic.o -MD)
+I (HAL\Ultrasonic\ultrasonic.h)(0x681815E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (MCAL\Timer1\Timer1.h)(0x680553C1)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+F (.\HAL\Ultrasonic\ultrasonic.h)(0x681815E2)()
+F (.\HAL\PushButton\PushButton.c)(0x681815C1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/pushbutton.o -MD)
+I (HAL\PushButton\PushButton.h)(0x68055343)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+I (Drivers\driverlib\gpio.h)(0x6800C71B)
+I (Drivers\inc\hw_memmap.h)(0x6800C71B)
+F (.\HAL\PushButton\PushButton.h)(0x68055343)()
+F (.\APP\Display\display.c)(0x68181663)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/display.o -MD)
+I (APP\Display\display.h)(0x68181642)
+I (Tasks\..\HAL\LCD\LCD.h)(0x681815B3)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-F (.\LED.h)(0x680AF5BC)()
-F (.\Port_Config.c)(0x680AFEFE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/port_config.o -MD)
-I (..\Automotive-Smart-Safety-System\Port_Config.h)(0x680AFEFA)
-I (Drivers\inc\TM4C123GH6PM.h)(0x6807EDC8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-F (.\Port_Config.h)(0x680AFEFA)()
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/clib_os.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/clib_os.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\semphr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/cmsis_os2.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x664C2CE8)
+I (Tasks\..\MCAL\Timer0\timer0.h)(0x680553BC)
+I (Drivers\inc\tm4c123gh6pm.h)(0x6800C71B)
+I (Drivers\driverlib\sysctl.h)(0x6800C71B)
+F (.\APP\Display\display.h)(0x68181642)()
+F (.\Tasks\Tasks.c)(0x6800C71B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/tasks.o -MD)
+I (Tasks\Tasks.h)(0x6800C71B)
+F (.\Tasks\Tasks.h)(0x6800C71B)()
+F (.\Drivers\driverlib\rvmdk\driverlib.lib)(0x6800C71B)()
+F (.\Port_Config.c)(0x6818162D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/port_config.o -MD)
+I (..\Automotive-Smart-Safety-System\Port_Config.h)(0x68181630)
+I (Drivers\inc\TM4C123GH6PM.h)(0x6800C71B)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+F (.\Port_Config.h)(0x68181630)()
+F (.\HAL\LEDS\LED.c)(0x68181761)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/led.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+F (.\HAL\LEDS\LED.h)(0x681815B7)()
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/clib_os.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/clib_os.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\os_tick.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\event_groups.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\semphr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_os2.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.c)(0x664C2CE8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/os_systick.o -MD)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\os_tick.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-F (C:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/EventRecorder.c)(0x62429EA4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/eventrecorder.o -MD)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\semphr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/cmsis_os2.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h)(0x5B8F96CE)
-I (RTE\Compiler\EventRecorderConf.h)(0x6807EDC8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c)(0x584E7E1E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/retarget_io.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\os_tick.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\event_groups.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\semphr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_os2.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Source/os_systick.c)(0x664C2CE8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/os_systick.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\os_tick.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+F (C:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/EventRecorder.c)(0x62429EA4)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/eventrecorder.o -MD)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h)(0x5B8F96CE)
+I (RTE\Compiler\EventRecorderConf.h)(0x6800C71B)
+F (C:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c)(0x584E7E1E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/retarget_io.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\rt_sys.h)(0x63889D68)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h)(0x5B8F96CE)
-F (RTE/Compiler/EventRecorderConf.h)(0x6807EDC8)()
-F (RTE/Device/TM4C123GH6PM/startup_TM4C123.s)(0x680C122A)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TM4C123GH6PM SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_tm4c123.o)
-F (RTE/Device/TM4C123GH6PM/system_TM4C123.c)(0x6807EDC8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/system_tm4c123.o -MD)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h)(0x5B8F96CE)
+F (RTE/Compiler/EventRecorderConf.h)(0x6800C71B)()
+F (RTE/Device/TM4C123GH6PM/startup_TM4C123.s)(0x680CDC95)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TM4C123GH6PM SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_tm4c123.o)
+F (RTE/Device/TM4C123GH6PM/system_TM4C123.c)(0x6800C71B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/system_tm4c123.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/freertos_evr.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/freertos_evr.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h)(0x5B8F96CE)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/event_groups.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/event_groups.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h)(0x5B8F96CE)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/event_groups.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/event_groups.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\event_groups.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/list.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/list.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\event_groups.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/list.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/list.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F/port.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/port.o -MD)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F/port.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/port.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/MemMang/heap_4.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/heap_4.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/MemMang/heap_4.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/heap_4.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/queue.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/queue.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/queue.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/queue.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/tasks.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/tasks_1.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/tasks.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/tasks_1.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\stack_macros.h)(0x6628B5E8)
-F (C:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/timers.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/syous/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/syous/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timers.o -MD)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\stack_macros.h)(0x6628B5E8)
+F (C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/timers.c)(0x6628B5E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O1 -ffunction-sections -w -I ./MCAL/ADC0 -I ./MCAL/ADC1 -I ./MCAL/I2C -I ./MCAL/Timer0 -I ./MCAL/Timer1 -I ./HAL/LCD -I ./HAL/PushButton -I ./HAL/Buzzer -I ./HAL/Doors -I ./HAL/IginitionSwitch -I ./HAL/LCD -I ./HAL/Lock -I ./HAL/Potentiometer -I ./HAL/Ultrasonic -I ./Tasks -I ./Drivers -I ./MCAL/GPIO -I ../Automotive-Smart-Safety-System -I ./Drivers/inc -I ./HAL/LEDS-I./RTE/Compiler-I./RTE/RTOS-I./RTE/_Target_1-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/portable/GCC/ARM_CM4F-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Driver/Include-IC:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/RTOS2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Include-IC:/Users/medos/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timers.o -MD)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\FreeRTOS.h)(0x6628B5E8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63889D68)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x680AB4ED)
-I (RTE\_Target_1\RTE_Components.h)(0x6807EE57)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x680CDC95)
+I (RTE\_Target_1\RTE_Components.h)(0x680F5CDE)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530EF2F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x550FE22C)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm4.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_version.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_compiler.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\cmsis_armclang.h)(0x664C2CE8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x67A098CB)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
-I (C:\Users\syous\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
-F (RTE/RTOS/FreeRTOSConfig.h)(0x680AB4ED)()
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C2CE8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B6D5F6)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\projdefs.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\portable.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\deprecated_definitions.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\mpu_wrappers.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\task.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\list.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\queue.h)(0x6628B5E8)
+I (C:\Users\medos\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\11.1.0\Source\include\timers.h)(0x6628B5E8)
+F (RTE/RTOS/FreeRTOSConfig.h)(0x680CDC95)()

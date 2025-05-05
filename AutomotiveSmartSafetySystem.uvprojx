@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\Timer0;.\MCAL\Timer1;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers;.\MCAL\GPIO;..\Automotive-Smart-Safety-System;.\Drivers\inc</IncludePath>
+              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\Timer0;.\MCAL\Timer1;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers;.\MCAL\GPIO;..\Automotive-Smart-Safety-System;.\Drivers\inc;.\HAL\LEDS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -613,21 +613,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>LED</GroupName>
-          <Files>
-            <File>
-              <FileName>LED.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LED.c</FilePath>
-            </File>
-            <File>
-              <FileName>LED.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\LED.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Port_Config</GroupName>
           <Files>
             <File>
@@ -639,6 +624,21 @@
               <FileName>Port_Config.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Port_Config.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LEDS</GroupName>
+          <Files>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\LEDS\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LEDS\LED.h</FilePath>
             </File>
           </Files>
         </Group>

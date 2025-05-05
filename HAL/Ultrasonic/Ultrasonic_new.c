@@ -1,12 +1,12 @@
 #include "Ultrasonic_new.h"
-#include "Timer0_new.h"    // for Timer0_Delay
-   // for Timer3_Count_Init, Timer3_Count_Ret
+#include "Timer0_new.h" // for Timer0_Delay
+                        // for Timer3_Count_Init, Timer3_Count_Ret
 #include "GPIO_new.h"
 #include "util.h"
 #include <stdint.h>
 #define ULTRASONIC_TIMEOUT_TICKS 0x00FFFFFFU
-// If bus = 16 MHz, tick = 1/16 µs, speed = 0.034 cm/µs:
-// cm per tick = (1/16)*0.034 = 0.002125 cm
+// If bus = 16ï¿½MHz, tick = 1/16ï¿½ï¿½s, speed = 0.034ï¿½cm/ï¿½s:
+// cm per tick = (1/16)*0.034 = 0.002125ï¿½cm
 #define CM_PER_TICK (0.002125f)
 
 void Ultrasonic_init(void)
@@ -23,7 +23,7 @@ void Ultrasonic_init(void)
 void Ultrasonic_Trigger(void)
 {
     GPIO_Write_Pin(PA, PIN2, HIGHV);
-    Timer0_Delay(10);  // 10 µs
+    Timer0_Delay(10); // 10ï¿½ï¿½s
     GPIO_Write_Pin(PA, PIN2, LOWV);
 }
 
@@ -34,16 +34,20 @@ static u32 Timer3_CapturePulseTicks(void)
 
     // Clear and wait rising
     GPTMICR3 = 1 << 0;
-    while ((GPTMRIS3 & 1) == 0) {
-        if (++timeout >= ULTRASONIC_TIMEOUT_TICKS) return UINT32_MAX;
+    while ((GPTMRIS3 & 1) == 0)
+    {
+        if (++timeout >= ULTRASONIC_TIMEOUT_TICKS)
+            return UINT32_MAX;
     }
     t0 = GPTMTAR3;
 
     // Clear and wait falling
     GPTMICR3 = 1 << 0;
     timeout = 0;
-    while ((GPTMRIS3 & 1) == 0) {
-        if (++timeout >= ULTRASONIC_TIMEOUT_TICKS) return UINT32_MAX;
+    while ((GPTMRIS3 & 1) == 0)
+    {
+        if (++timeout >= ULTRASONIC_TIMEOUT_TICKS)
+            return UINT32_MAX;
     }
     t1 = GPTMTAR3;
 
@@ -55,8 +59,9 @@ u32 Ultrasonic_readDistance(void)
     Ultrasonic_Trigger();
 
     u32 ticks = Timer3_CapturePulseTicks();
-    if (ticks == UINT32_MAX) {
-        return UINT32_MAX;  // timeout/no echo
+    if (ticks == UINT32_MAX)
+    {
+        return UINT32_MAX; // timeout/no echo
     }
 
     // Distance = (ticks * cm_per_tick) / 2

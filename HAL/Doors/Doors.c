@@ -9,7 +9,7 @@
 #define LIMITSWITCH_PORT GPIO_PORTC_BASE
 #define LIMITSWITCH_PIN GPIO_PIN_4
 
-volatile bool doorStatus = false;
+extern volatile bool doorStatus;
 
 void DOOR_Init(void)
 {

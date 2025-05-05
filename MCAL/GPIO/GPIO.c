@@ -4,7 +4,7 @@
 #define GPIO_DIR_MODE_OUT 1
 #define GPIO_DIR_MODE_IN 0
 
-    void DIO_Init(char port, uint8_t pins, uint32_t direction)
+void DIO_Init(char port, uint8_t pins, uint32_t direction)
 {
     volatile uint32_t delay;
     switch (port)

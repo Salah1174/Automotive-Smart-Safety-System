@@ -5,6 +5,8 @@
 
 #define TRIGGER_PIN (1 << 6) // PA6
 
+extern volatile uint32_t distanceValue;
+
 void PortA_Init(void)
 {
     SYSCTL->RCGCGPIO |= (1 << 0); // Enable clock to GPIOA
@@ -58,6 +60,6 @@ uint32_t ultrasonic_ReadValue()
 
     // Calculate distance in cm (Time in clock ticks at 16 MHz ? 1 tick = 62.5ns)
     distance = (pulseWidth * 0.0343) / 2; // Speed of sound is ~343 m/s
-
-    return (uint32_t)distance;
+    distanceValue = (uint32_t)distance;
+    return distanceValue;
 }
