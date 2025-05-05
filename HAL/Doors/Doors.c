@@ -9,7 +9,7 @@
 #define LIMITSWITCH_PORT GPIO_PORTC_BASE
 #define LIMITSWITCH_PIN GPIO_PIN_4
 
-volatile bool doorStatus = false;
+extern volatile bool doorStatus;
 
 void DOOR_Init(void)
 {
@@ -35,7 +35,7 @@ void DOOR_Init(void)
 
 bool DOOR_Status(void)
 {
-    return !GPIOPinRead(LIMITSWITCH_PORT, LIMITSWITCH_PIN); // Return true if pressed
+    return GPIOPinRead(LIMITSWITCH_PORT, LIMITSWITCH_PIN); // Return true if pressed
 }
 
 // Interrupt Service Routine for Port C

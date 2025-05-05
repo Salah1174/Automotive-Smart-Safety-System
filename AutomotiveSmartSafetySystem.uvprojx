@@ -315,7 +315,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\DIO;.\MCAL\Timer0;.\MCAL\Timer1;.\MCAL\UART0;.\MCAL\UART5;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers</IncludePath>
+              <IncludePath>.\MCAL\ADC0;.\MCAL\ADC1;.\MCAL\I2C;.\MCAL\Timer0;.\MCAL\Timer1;.\HAL\LCD;.\HAL\PushButton;.\HAL\Buzzer;.\HAL\Doors;.\HAL\IginitionSwitch;.\HAL\LCD;.\HAL\Lock;.\HAL\Potentiometer;.\HAL\Ultrasonic;.\Tasks;.\Drivers;.\MCAL\GPIO;..\Automotive-Smart-Safety-System;.\Drivers\inc;.\HAL\LEDS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -389,21 +389,6 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>ADC0</GroupName>
-          <Files>
-            <File>
-              <FileName>ADC0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\ADC0\ADC0.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC0.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\MCAL\ADC0\ADC0.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -464,36 +449,6 @@
               <FileName>Timer1.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\MCAL\Timer1\Timer1.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UART0</GroupName>
-          <Files>
-            <File>
-              <FileName>uart0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\UART0\uart0.c</FilePath>
-            </File>
-            <File>
-              <FileName>uart0.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\MCAL\UART0\uart0.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UART5</GroupName>
-          <Files>
-            <File>
-              <FileName>uart5.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\MCAL\UART5\uart5.c</FilePath>
-            </File>
-            <File>
-              <FileName>uart5.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\MCAL\UART5\uart5.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -658,17 +613,32 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>DIO</GroupName>
+          <GroupName>Port_Config</GroupName>
           <Files>
             <File>
-              <FileName>DIO.c</FileName>
+              <FileName>Port_Config.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\MCAL\DIO\DIO.c</FilePath>
+              <FilePath>.\Port_Config.c</FilePath>
             </File>
             <File>
-              <FileName>DIO.h</FileName>
+              <FileName>Port_Config.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\MCAL\DIO\DIO.h</FilePath>
+              <FilePath>.\Port_Config.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>LEDS</GroupName>
+          <Files>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HAL\LEDS\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\HAL\LEDS\LED.h</FilePath>
             </File>
           </Files>
         </Group>

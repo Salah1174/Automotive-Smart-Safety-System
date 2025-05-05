@@ -1,7 +1,18 @@
+/*
+GEAR
+GEAR
+GEAR
+GEAR
+GEAR
+GEAR
+*/
+
 #include "PushButton.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "inc/hw_memmap.h"
+
+extern volatile bool gearStatus;
 
 #define BUTTON_PORT GPIO_PORTF_BASE
 #define BUTTON_PIN GPIO_PIN_4

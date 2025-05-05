@@ -110,7 +110,7 @@
 //  <i> Enable callback function call on each idle task iteration.
 //  <i> Callback function vApplicationIdleHook implementation is required when idle hook is enabled.
 //  <i> Default: 0
-#define configUSE_IDLE_HOOK                       0
+#define configUSE_IDLE_HOOK                       1
 
 //  <q>Use tick hook
 //  <i> Enable callback function call during each tick interrupt.
