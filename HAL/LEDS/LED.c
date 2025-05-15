@@ -34,12 +34,13 @@ void LEDs_Init(void)
 void RED(void)
 {
 	LED_PORT->DATA ^= LED_RED; // Toggle PF1
-	LED_PORT->DATA = ~(LED_RED | LED_BLUE | LED_GREEN);
+	LED_PORT->DATA = ~(LED_BLUE | LED_GREEN);
 }
 void YELLOW(void)
 {
-	LED_PORT->DATA ^= LED_RED | LED_GREEN; // Toggle PF2
-	LED_PORT->DATA = ~(LED_BLUE);
+	// LED_PORT->DATA ^= LED_RED | LED_GREEN; // Toggle PF2
+	LED_PORT->DATA ^= LED_BLUE; // Toggle PF2
+	LED_PORT->DATA = ~(LED_RED | LED_GREEN);
 }
 void GREEN(void)
 {

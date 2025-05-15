@@ -18,7 +18,12 @@
 #include "IginitionSwitch.h"
 #include "Buzzer.h"
 #include "LED.h"
+#include "TM4C123.h"
 
+#define LED_RED (1U << 1)
+#define LED_BLUE (1U << 2)
+#define LED_GREEN (1U << 3)
+#define LED_PORT GPIOF
 #define BUZZER_PORT GPIO_PORTB_BASE
 #define BUZZER_PIN GPIO_PIN_0
 
@@ -137,9 +142,11 @@ void ignition_task(void *pvParameters)
 	bool lastPressed = true;
 	bool carStatus = 0;
 	doorLock = 0;
+	
 	while (1)
 	{
 		currentPressed = IgnitionSwitch_Read();
+		distanceValue = ultrasonic_ReadValue();
 		if (currentPressed)
 		{
 			xSemaphoreTake(xIgnitionSemaphore, portMAX_DELAY);
@@ -161,6 +168,8 @@ void ignition_task(void *pvParameters)
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
 			// carOff_Display(&lcdDisplay);
+			LED_PORT->DATA = ~(LED_RED | LED_BLUE | LED_GREEN);
+			clear(&lcdDisplay);
 			noBacklight(&lcdDisplay);
 			xSemaphoreGive(xLCDMutex);
 			__asm(" WFI"); // Enter sleep mode
@@ -180,7 +189,7 @@ void GearLCD(void *pvParameter)
 		doorStatus = DOOR_Status();
 		carStatus = IgnitionSwitch_Read();
 		distanceValue = ultrasonic_ReadValue();
-
+		
 		if (speedValue > 50 && !ManualOverridden)
 		{
 			// LOCK THE DOOR AUTOMATICALLY
@@ -256,6 +265,7 @@ void AlertLCD(void *pvParameter)
 		xSemaphoreTake(xBinarySemaphore1, 100000);
 		speedValue = potentiometer_ReadValue();
 		doorStatus = DOOR_Status();
+		distanceValue = ultrasonic_ReadValue();
 		xSemaphoreTake(xLCDMutex, portMAX_DELAY);
 		Alert_Display(&lcdDisplay);
 		xSemaphoreGive(xLCDMutex);

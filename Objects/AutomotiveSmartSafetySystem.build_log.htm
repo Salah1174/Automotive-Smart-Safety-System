@@ -28,10 +28,6 @@ Project File Date:  05/05/2025
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
 Note: source file 'C:/Users/medos/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/11.1.0/Source/tasks.c' - object file renamed from '.\Objects\tasks.o' to '.\Objects\tasks_1.o'.
-compiling LED.c...
-compiling main.c...
-linking...
-Program Size: Code=20860 RO-data=2108 RW-data=8 ZI-data=13048  
 ".\Objects\AutomotiveSmartSafetySystem.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -101,29 +97,29 @@ Package Vendor: Keil
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:11.1.0
       Source file:   CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
-      Include file:  Source/include/semphr.h
-      Include file:  Source/include/task.h
-      Source file:   Source/queue.c
       Source file:   Source/tasks.c
+      Include file:  Source/include/FreeRTOS.h
       Include file:  Source/include/queue.h
       Source file:   Source/list.c
-      Include file:  Source/include/FreeRTOS.h
+      Source file:   Source/queue.c
+      Include file:  Source/include/task.h
       Source file:   Source/portable/GCC/ARM_CM4F/port.c
+      Include file:  Source/include/semphr.h
 
    * Component: ARM.FreeRTOS::RTOS:Event Groups:11.1.0
-      Include file:  Source/include/event_groups.h
       Source file:   Source/event_groups.c
+      Include file:  Source/include/event_groups.h
 
    * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:11.1.0
       Source file:   Source/portable/MemMang/heap_4.c
 
    * Component: ARM.FreeRTOS::RTOS:Timers:11.1.0
-      Include file:  Source/include/timers.h
       Source file:   Source/timers.c
+      Include file:  Source/include/timers.h
 
    * Component: ARM::CMSIS Driver:I2C:Custom:1.0.0
-      Source file:   CMSIS/Driver/DriverTemplates/Driver_I2C.c
       Include file:  CMSIS/Driver/Include/Driver_I2C.h
+      Source file:   CMSIS/Driver/DriverTemplates/Driver_I2C.c
 
    * Component: ARM::CMSIS:CORE:6.1.0
 
@@ -136,9 +132,9 @@ Package Vendor: Keil
       Source file:   CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c
 
    * Component: Keil.ARM Compiler::Compiler:Event Recorder:DAP:1.5.1
+      Include file:  Config/EventRecorderConf.h
       Include file:  Include/EventRecorder.h
       Source file:   Source/EventRecorder.c
-      Include file:  Config/EventRecorderConf.h
 
    * Component: Keil.ARM Compiler::Compiler:I/O:STDIN:ITM:1.2.0
       Source file:   Source/retarget_io.c
@@ -147,9 +143,9 @@ Package Vendor: Keil
       Source file:   Source/retarget_io.c
 
    * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device/Source/system_TM4C123.c
       Include file:  Device/Include/TM4C123/TM4C123.h
       Source file:   Device/Source/ARM/startup_TM4C123.s
-      Source file:   Device/Source/system_TM4C123.c
 Build Time Elapsed:  00:00:00
 </pre>
 </body>
