@@ -123,7 +123,7 @@ int main(void)
 	//		}
 
 	bool lastPressed = false;
-
+	distanceValue = ultrasonic_ReadValue();
 	xTaskCreate(ignition_task, "Ignition", 244, NULL, 6, &xIgnition);
 	xTaskCreate(GearLCD, "Gear LCD", 244, NULL, 2, &xDisplay);
 	xTaskCreate(AlertLCD, "Alert LCD", 150, NULL, 3, &xAlert);
@@ -142,7 +142,7 @@ void ignition_task(void *pvParameters)
 	bool lastPressed = true;
 	bool carStatus = 0;
 	doorLock = 0;
-	
+
 	while (1)
 	{
 		currentPressed = IgnitionSwitch_Read();
@@ -160,6 +160,7 @@ void ignition_task(void *pvParameters)
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
 			backlight(&lcdDisplay);
 			carOn_Display(&lcdDisplay);
+			distanceValue = ultrasonic_ReadValue();
 			xSemaphoreGive(xLCDMutex);
 			delay_ms(250);
 			vTaskDelete(NULL);
@@ -189,7 +190,7 @@ void GearLCD(void *pvParameter)
 		doorStatus = DOOR_Status();
 		carStatus = IgnitionSwitch_Read();
 		distanceValue = ultrasonic_ReadValue();
-		
+
 		if (speedValue > 50 && !ManualOverridden)
 		{
 			// LOCK THE DOOR AUTOMATICALLY
@@ -209,7 +210,6 @@ void GearLCD(void *pvParameter)
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
 			D_Display(&lcdDisplay, speedValue, doorStatus, doorLock);
-
 			xSemaphoreGive(xLCDMutex);
 			delay_ms(500);
 		}
@@ -217,6 +217,7 @@ void GearLCD(void *pvParameter)
 		if (currentPress == true)
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
+			distanceValue = ultrasonic_ReadValue();
 			R_Display(&lcdDisplay, distanceValue, speedValue, doorStatus, doorLock);
 			xSemaphoreGive(xLCDMutex);
 			if (distanceValue > 800)
@@ -273,6 +274,7 @@ void AlertLCD(void *pvParameter)
 		while (speedValue > 150 && doorStatus == true)
 		{
 			speedValue = potentiometer_ReadValue();
+			distanceValue = ultrasonic_ReadValue();
 			doorStatus = DOOR_Status();
 			GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1);
 			RED();
