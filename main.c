@@ -136,6 +136,7 @@ void ignition_task(void *pvParameters)
 	bool currentPressed;
 	bool lastPressed = true;
 	bool carStatus = 0;
+	doorLock = 0;
 	while (1)
 	{
 		currentPressed = IgnitionSwitch_Read();
@@ -150,6 +151,7 @@ void ignition_task(void *pvParameters)
 		if (carStatus && (currentPressed != lastPressed))
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
+			backlight(&lcdDisplay);
 			carOn_Display(&lcdDisplay);
 			xSemaphoreGive(xLCDMutex);
 			delay_ms(250);
@@ -158,7 +160,8 @@ void ignition_task(void *pvParameters)
 		if (!carStatus && (currentPressed != lastPressed))
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
-			carOff_Display(&lcdDisplay);
+			// carOff_Display(&lcdDisplay);
+			noBacklight(&lcdDisplay);
 			xSemaphoreGive(xLCDMutex);
 			__asm(" WFI"); // Enter sleep mode
 		}
@@ -197,6 +200,7 @@ void GearLCD(void *pvParameter)
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
 			D_Display(&lcdDisplay, speedValue, doorStatus, doorLock);
+
 			xSemaphoreGive(xLCDMutex);
 			delay_ms(500);
 		}
@@ -264,7 +268,7 @@ void AlertLCD(void *pvParameter)
 			RED();
 			delay_ms(500);
 		}
-		GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1);
+		GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0);
 		LED_off();
 	}
 }

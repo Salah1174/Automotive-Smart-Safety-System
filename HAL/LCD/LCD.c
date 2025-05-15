@@ -153,10 +153,11 @@ void backlight(LCD_I2C *display)
 	expanderWrite(display, 0);
 }
 
-// void noBacklight(LCD_I2C *display) {
-//	display->_backlightval=LCD_NOBACKLIGHT;
-//	expanderWrite(display, 0);
-// }
+void noBacklight(LCD_I2C *display)
+{
+	display->_backlightval = LCD_NOBACKLIGHT;
+	expanderWrite(display, 0);
+}
 
 // void noBlink(LCD_I2C *display  ) {
 //	display->_displaycontrol &= ~LCD_BLINKON;
@@ -183,6 +184,7 @@ void noDisplay(LCD_I2C *display)
 	display->_displaycontrol &= ~LCD_DISPLAYON;
 	command(display, LCD_DISPLAYCONTROL | display->_displaycontrol);
 }
+
 void display(LCD_I2C *display)
 {
 	display->_displaycontrol |= LCD_DISPLAYON;
