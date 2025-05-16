@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\AutomotiveSmartSafetySystem.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\AutomotiveSmartSafetySystem.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Fri May 16 03:32:02 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Fri May 16 17:53:41 2025
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -406,7 +406,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[94]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 224 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; vTaskStartScheduler &rArr; xTimerCreateTimerTask &rArr; xTaskCreateStatic &rArr; EvrFreeRTOSTasks_xTaskCreateStatic &rArr; EventRecord4
 </UL>
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1409,12 +1409,12 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;potentiometer_ReadValue
 </UL>
 
-<P><STRONG><a name="[7c]"></a>AlertLCD</STRONG> (Thumb, 248 bytes, Stack size 8 bytes, main.o(.text.AlertLCD))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = AlertLCD &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2
+<P><STRONG><a name="[7c]"></a>AlertLCD</STRONG> (Thumb, 234 bytes, Stack size 0 bytes, main.o(.text.AlertLCD))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = AlertLCD &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Alert_Display
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RED
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Alert_Display
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_off
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RED
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DOOR_Status
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;potentiometer_ReadValue
@@ -2269,12 +2269,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearLCD
 </UL>
 
-<P><STRONG><a name="[7b]"></a>GearLCD</STRONG> (Thumb, 756 bytes, Stack size 16 bytes, main.o(.text.GearLCD))
+<P><STRONG><a name="[7b]"></a>GearLCD</STRONG> (Thumb, 864 bytes, Stack size 16 bytes, main.o(.text.GearLCD))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264 + Unknown Stack Size
 <LI>Call Chain = GearLCD &rArr; D_Display &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RED
-<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;YELLOW
+<BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;YELLOW
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;D_Display
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GREEN
@@ -2407,7 +2406,6 @@ Global Symbols
 
 <P><STRONG><a name="[b1]"></a>RED</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, led.o(.text.RED))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AlertLCD
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GearLCD
 </UL>
 
 <P><STRONG><a name="[11a]"></a>R_Display</STRONG> (Thumb, 92 bytes, Stack size 128 bytes, display.o(.text.R_Display))
@@ -2544,7 +2542,7 @@ Global Symbols
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;carOn_Display
 </UL>
 
-<P><STRONG><a name="[7a]"></a>ignition_task</STRONG> (Thumb, 284 bytes, Stack size 8 bytes, main.o(.text.ignition_task))
+<P><STRONG><a name="[7a]"></a>ignition_task</STRONG> (Thumb, 304 bytes, Stack size 8 bytes, main.o(.text.ignition_task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = ignition_task &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick &rArr; EvrFreeRTOSTasks_xTaskIncrementTick_Return &rArr; EventRecord2
 </UL>
 <BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;noBacklight
@@ -2560,8 +2558,8 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> main.o(.text.main)
 <LI> main.o(.text.GearLCD)
 </UL>
-<P><STRONG><a name="[95]"></a>main</STRONG> (Thumb, 360 bytes, Stack size 8 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216 + Unknown Stack Size
+<P><STRONG><a name="[95]"></a>main</STRONG> (Thumb, 412 bytes, Stack size 16 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 224 + Unknown Stack Size
 <LI>Call Chain = main &rArr; vTaskStartScheduler &rArr; xTimerCreateTimerTask &rArr; xTaskCreateStatic &rArr; EvrFreeRTOSTasks_xTaskCreateStatic &rArr; EventRecord4
 </UL>
 <BR>[Calls]<UL><LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskStartScheduler
@@ -2687,7 +2685,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b0]"></a>ultrasonic_ReadValue</STRONG> (Thumb, 216 bytes, Stack size 16 bytes, ultrasonic.o(.text.ultrasonic_ReadValue))
+<P><STRONG><a name="[b0]"></a>ultrasonic_ReadValue</STRONG> (Thumb, 240 bytes, Stack size 16 bytes, ultrasonic.o(.text.ultrasonic_ReadValue))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ultrasonic_ReadValue &rArr; __aeabi_dmul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul

@@ -69,6 +69,7 @@ TaskHandle_t xIgnition = NULL;
 xSemaphoreHandle xBinarySemaphore1;
 xSemaphoreHandle xBinarySemaphore2;
 xSemaphoreHandle xLCDMutex;
+xSemaphoreHandle xUltrasonicMutex;
 SemaphoreHandle_t xIgnitionSemaphore;
 
 LCD_I2C lcdDisplay;
@@ -104,6 +105,7 @@ int main(void)
 	LCDI2CInit(&lcdDisplay, 0x27, 16, 2);
 	LEDs_Init();
 	ultrasonic_Init();
+	delay_ms(100);
 	PushButton_Init();
 	potentiometer_Init();
 	DOOR_Init();
@@ -117,7 +119,7 @@ int main(void)
 	xIgnitionSemaphore = xSemaphoreCreateBinary();
 
 	xLCDMutex = xSemaphoreCreateMutex();
-
+	xUltrasonicMutex = xSemaphoreCreateMutex();
 	//		if(xLCDMutex != NULL)
 	//		{
 	//		}
@@ -140,7 +142,7 @@ void ignition_task(void *pvParameters)
 
 	bool currentPressed;
 	bool lastPressed = true;
-	bool carStatus = 0;
+	carStatus = 0;
 	doorLock = 0;
 
 	while (1)
@@ -216,10 +218,12 @@ void GearLCD(void *pvParameter)
 		if (currentPress == true)
 		{
 			xSemaphoreTake(xLCDMutex, portMAX_DELAY);
+			xSemaphoreTake(xUltrasonicMutex, portMAX_DELAY);
 			distanceValue = ultrasonic_ReadValue();
+			xSemaphoreGive(xUltrasonicMutex);
 			R_Display(&lcdDisplay, distanceValue, speedValue, doorStatus, doorLock);
 			xSemaphoreGive(xLCDMutex);
-			if (distanceValue > 800)
+			if (distanceValue > 1000)
 			{
 				GREEN();
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1); // Set PF1 high
@@ -227,7 +231,7 @@ void GearLCD(void *pvParameter)
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF1 low
 				delay_ms(500);
 			}
-			if (distanceValue > 300 && distanceValue < 800)
+			if (distanceValue > 600 && distanceValue < 1000)
 			{
 				YELLOW();
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1); // Set PF1 high
@@ -235,11 +239,20 @@ void GearLCD(void *pvParameter)
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF1 low
 				delay_ms(250);
 			}
-			if (distanceValue < 300)
+			if (distanceValue > 200 && distanceValue < 600)
 			{
-				RED();
+				YELLOW();
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1); // Set PF1 high
 				delay_ms(50);
+				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF1 low
+				delay_ms(50);
+			}
+			if (distanceValue < 200)
+			{
+				LED_PORT->DATA = ~(LED_RED | LED_BLUE | LED_GREEN);
+
+			//	GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1); // Set PF1 high
+			//	delay_ms(50);
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF1 low
 				delay_ms(50);
 			}
@@ -252,7 +265,6 @@ void GearLCD(void *pvParameter)
 			delay_ms(500);
 			//		mainTRIGGER_INTERRUPT_2();
 		}
-
 		vTaskDelay(250 / portTICK_RATE_MS);
 	}
 }
@@ -273,11 +285,13 @@ void AlertLCD(void *pvParameter)
 		while (speedValue > 150 && doorStatus == true)
 		{
 			speedValue = potentiometer_ReadValue();
+			xSemaphoreTake(xUltrasonicMutex, portMAX_DELAY);
 			distanceValue = ultrasonic_ReadValue();
+			xSemaphoreGive(xUltrasonicMutex);
 			doorStatus = DOOR_Status();
 			GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1);
 			RED();
-			delay_ms(500);
+			//delay_ms(20);
 		}
 		GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0);
 		LED_off();

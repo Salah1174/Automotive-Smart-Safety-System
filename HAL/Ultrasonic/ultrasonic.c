@@ -30,6 +30,7 @@ uint32_t ultrasonic_ReadValue()
 {
     uint32_t risingEdge, fallingEdge, pulseWidth;
     float distance;
+    int timeout = 100000;
 
     // Send trigger pulse: 10us HIGH
     GPIOA->DATA &= ~TRIGGER_PIN; // Clear trigger
@@ -41,8 +42,10 @@ uint32_t ultrasonic_ReadValue()
     GPIOA->DATA &= ~TRIGGER_PIN; // Set trigger low
 
     // Wait for rising edge
-    while ((TIMER1->RIS & (1 << 2)) == 0)
+    while ((TIMER1->RIS & (1 << 2)) == 0 && timeout--)
         ;
+    if (timeout <= 0)
+        return 0; // Or some default/error value
     risingEdge = TIMER1->TAR;
     TIMER1->ICR |= (1 << 2); // Clear capture flag
 
