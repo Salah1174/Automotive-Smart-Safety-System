@@ -48,7 +48,7 @@ void LCDI2CInit(LCD_I2C *display, uint8_t lcd_address, uint8_t lcd_cols, uint8_t
 	display->_Addr = lcd_address;
 	display->_cols = lcd_cols;
 	display->_rows = lcd_rows;
-	display->_backlightval = LCD_BACKLIGHT;
+	// display->_backlightval = LCD_BACKLIGHT;
 
 	display->_displayfunction = LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS;
 	begin(display);
@@ -92,7 +92,7 @@ void begin(LCD_I2C *display)
 	command(display, LCD_FUNCTIONSET | display->_displayfunction);
 
 	// turn the display on with no cursor or blinking default
-	display->_displaycontrol = LCD_DISPLAYON | LCD_CURSOROFF | LCD_BLINKOFF;
+	// display->_displaycontrol = LCD_DISPLAYON | LCD_CURSOROFF | LCD_BLINKOFF;
 
 	configDisplay(display);
 

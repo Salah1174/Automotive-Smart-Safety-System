@@ -146,7 +146,6 @@ void ignition_task(void *pvParameters)
 	while (1)
 	{
 		currentPressed = IgnitionSwitch_Read();
-		distanceValue = ultrasonic_ReadValue();
 		if (currentPressed)
 		{
 			xSemaphoreTake(xIgnitionSemaphore, portMAX_DELAY);
@@ -189,7 +188,7 @@ void GearLCD(void *pvParameter)
 		speedValue = potentiometer_ReadValue();
 		doorStatus = DOOR_Status();
 		carStatus = IgnitionSwitch_Read();
-		distanceValue = ultrasonic_ReadValue();
+		// distanceValue = ultrasonic_ReadValue();
 
 		if (speedValue > 50 && !ManualOverridden)
 		{
@@ -266,7 +265,7 @@ void AlertLCD(void *pvParameter)
 		xSemaphoreTake(xBinarySemaphore1, 100000);
 		speedValue = potentiometer_ReadValue();
 		doorStatus = DOOR_Status();
-		distanceValue = ultrasonic_ReadValue();
+		// distanceValue = ultrasonic_ReadValue();
 		xSemaphoreTake(xLCDMutex, portMAX_DELAY);
 		Alert_Display(&lcdDisplay);
 		xSemaphoreGive(xLCDMutex);

@@ -97,7 +97,7 @@
 //  <q>Idle should yield
 //  <i> Control Yield behaviour of the idle task.
 //  <i> Default: 1
-#define configIDLE_SHOULD_YIELD                   1
+#define configIDLE_SHOULD_YIELD                   0
 
 //  <o>Check for stack overflow
 //    <0=>Disable <1=>Method one <2=>Method two
@@ -110,7 +110,7 @@
 //  <i> Enable callback function call on each idle task iteration.
 //  <i> Callback function vApplicationIdleHook implementation is required when idle hook is enabled.
 //  <i> Default: 0
-#define configUSE_IDLE_HOOK                       1
+#define configUSE_IDLE_HOOK                       0
 
 //  <q>Use tick hook
 //  <i> Enable callback function call during each tick interrupt.
