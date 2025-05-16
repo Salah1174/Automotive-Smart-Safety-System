@@ -76,6 +76,7 @@ Section Cross References
     main.o(.text.GearLCD) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
     main.o(.text.GearLCD) refers to display.o(.text.D_Display) for D_Display
     main.o(.text.GearLCD) refers to led.o(.text.YELLOW) for YELLOW
+    main.o(.text.GearLCD) refers to led.o(.text.RED) for RED
     main.o(.text.GearLCD) refers to main.o(.bss.xIgnitionSemaphore) for xIgnitionSemaphore
     main.o(.text.GearLCD) refers to main.o(.text.ignition_task) for ignition_task
     main.o(.text.GearLCD) refers to main.o(.rodata.str1.1) for .L.str

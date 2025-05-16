@@ -241,7 +241,7 @@ void GearLCD(void *pvParameter)
 			}
 			if (distanceValue > 200 && distanceValue < 600)
 			{
-				YELLOW();
+				RED();
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 1); // Set PF1 high
 				delay_ms(50);
 				GPIOPinWrite(BUZZER_PORT, BUZZER_PIN, 0x00); // Set PF1 low
